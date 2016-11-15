@@ -495,6 +495,7 @@ def main_function(cfg):
     norm_info_file = os.path.join(data_dir, 'norm_info' + cfg.combined_feature_name + '_' + str(cfg.cmp_dim) + '_' + cfg.output_feature_normalisation + '.dat')
 	
     ### normalise input full context label
+    ##Ashish Normalizastion is done here
     # currently supporting two different forms of lingustic features
     # later, we should generalise this 
 
@@ -673,13 +674,17 @@ def main_function(cfg):
         logger.info('saved %s vectors to %s' %(label_min_vector.size, label_norm_file))
 
 
+    print "Label Feature done!! (INPUT)\n\n"
+    
+    ##Ashish Now making OUTPUT Features
     ### make output duration data
     if cfg.MAKEDUR:
     	logger.info('creating duration (output) features')
         label_type = cfg.label_type
         feature_type = cfg.dur_feature_type
         label_normaliser.prepare_dur_data(in_label_align_file_list, dur_file_list, label_type, feature_type)
-
+        
+    print "Duration Features Done (OUTPUT)\n\n"
 
     ### make output acoustic data
     if cfg.MAKECMP:
@@ -690,8 +695,16 @@ def main_function(cfg):
         acoustic_worker = AcousticComposition(delta_win = delta_win, acc_win = acc_win)
         if 'dur' in cfg.in_dir_dict.keys() and cfg.AcousticModel:
             acoustic_worker.make_equal_frames(dur_file_list, lf0_file_list, cfg.in_dimension_dict)
+        
+        #Ashish Now getting all output features from frontend 
+        # At this point we already have mgc,bap and lf0 stoted into files
+        # print in_file_list_dict
+        # print nn_cmp_file_list
+        # print cfg.in_dimension_dict
+        # print cfg.out_dimension_dict
         acoustic_worker.prepare_nn_data(in_file_list_dict, nn_cmp_file_list, cfg.in_dimension_dict, cfg.out_dimension_dict)
 
+        sys.exit(1)
         if cfg.remove_silence_using_binary_labels:
             ## do this to get lab_dim:
             label_composer = LabelComposer()
@@ -770,6 +783,8 @@ def main_function(cfg):
 
             feature_index += cfg.out_dimension_dict[feature_name]
 
+    print "All Acoustic Features Done!! (OUTPUT)\n\n"
+
     train_x_file_list = nn_label_norm_file_list[0:cfg.train_file_number]
     train_y_file_list = nn_cmp_norm_file_list[0:cfg.train_file_number]
     valid_x_file_list = nn_label_norm_file_list[cfg.train_file_number:cfg.train_file_number+cfg.valid_file_number]    
@@ -830,6 +845,12 @@ def main_function(cfg):
                 raise
 
         try:
+            print "Starting to train DNN"
+            print train_x_file_list
+            print train_y_file_list
+            print lab_dim
+            print cfg.cmp_dim
+            print "Config Done!! Ashish"
             train_DNN(train_xy_file_list = (train_x_file_list, train_y_file_list), \
                       valid_xy_file_list = (valid_x_file_list, valid_y_file_list), \
                       nnets_file_name = nnets_file_name, \
@@ -1151,7 +1172,6 @@ if __name__ == '__main__':
     PBS_JOBID = os.getenv('PBS_JOBID')
     if PBS_JOBID:
         logger.info('  PBS_JOBID: '+PBS_JOBID)
-
 
     if cfg.profile:
         logger.info('profiling is activated')

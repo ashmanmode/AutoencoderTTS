@@ -72,9 +72,9 @@ class   AcousticBase(object):
     def prepare_nn_data(self, in_file_list_dict, out_file_list, in_dimension_dict, out_dimension_dict):
         
         self.file_number = len(out_file_list)
-        
+        # print "Inside prepare_nn_data"
         for data_stream_name in in_file_list_dict.keys():
-            
+            # print data_stream_name
             try:
                 assert len(in_file_list_dict[data_stream_name]) == self.file_number
             except AssertionError:
