@@ -446,7 +446,6 @@ def dnn_hidden_generation(valid_file_list, nnets_file_name, n_ins, n_outs, out_f
 
 def main_function(cfg):    
     
-    
     # get a logger for this main function
     logger = logging.getLogger("main")
     
@@ -548,6 +547,8 @@ def main_function(cfg):
         binary_label_file_list   = prepare_file_path_list(test_id_list, binary_label_dir, cfg.lab_ext)
         nn_label_file_list       = prepare_file_path_list(test_id_list, nn_label_dir, cfg.lab_ext)
         nn_label_norm_file_list  = prepare_file_path_list(test_id_list, nn_label_norm_dir, cfg.lab_ext)
+
+    print "loaded file list and generating feats"
 
     if cfg.NORMLAB and (cfg.label_style == 'HTS'):
         # simple HTS labels 
@@ -675,7 +676,7 @@ def main_function(cfg):
 
 
     print "Label Feature done!! (INPUT)\n\n"
-    
+
     ##Ashish Now making OUTPUT Features
     ### make output duration data
     if cfg.MAKEDUR:
@@ -704,7 +705,6 @@ def main_function(cfg):
         # print cfg.out_dimension_dict
         acoustic_worker.prepare_nn_data(in_file_list_dict, nn_cmp_file_list, cfg.in_dimension_dict, cfg.out_dimension_dict)
 
-        sys.exit(1)
         if cfg.remove_silence_using_binary_labels:
             ## do this to get lab_dim:
             label_composer = LabelComposer()

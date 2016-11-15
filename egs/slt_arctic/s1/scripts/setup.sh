@@ -7,8 +7,6 @@ fi
 
 current_working_dir=$(pwd)
 merlin_dir=$(dirname $(dirname $(dirname $current_working_dir)))
-echo $merlin_dir
-echo "dfvdfbvjjdf"
 experiments_dir=${current_working_dir}/experiments
 
 voice_name=$1

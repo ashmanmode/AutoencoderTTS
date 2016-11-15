@@ -1,0 +1,166 @@
+2016-11-15 06:41:09,156     INFO  configuration: logging is now fully configured
+2016-11-15 06:41:09,156    DEBUG  configuration: setting up output features
+2016-11-15 06:41:09,157    DEBUG  configuration:  dur
+2016-11-15 06:41:09,157     INFO  configuration:   in_dimension: 5
+2016-11-15 06:41:09,157     INFO  configuration:   out_dimension : 5
+2016-11-15 06:41:09,157     INFO  configuration:   in_directory : /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/dur
+2016-11-15 06:41:09,157     INFO  configuration: multistream dimensions: [5]
+2016-11-15 06:41:09,157     INFO  configuration: use_rprop : 0
+2016-11-15 06:41:09,158     INFO  configuration: dropout_rate : 0.0
+2016-11-15 06:41:09,158     INFO  configuration: projection_outsize : 10
+2016-11-15 06:41:09,158     INFO  configuration: early_stop_epochs : 5
+2016-11-15 06:41:09,158     INFO  configuration: warmup_epoch : 10
+2016-11-15 06:41:09,158     INFO  configuration: learning_rate : 0.002
+2016-11-15 06:41:09,158     INFO  configuration: layers_with_projection_input : [0]
+2016-11-15 06:41:09,158     INFO  configuration: batch_size : 64
+2016-11-15 06:41:09,159     INFO  configuration: model_type : DNN
+2016-11-15 06:41:09,159     INFO  configuration: hidden_layer_size : [512, 512, 512, 512]
+2016-11-15 06:41:09,159     INFO  configuration: projection_learning_rate_scaling : 1.0
+2016-11-15 06:41:09,159     INFO  configuration: pretraining_epochs : 10
+2016-11-15 06:41:09,159     INFO  configuration: initial_projection_distrib : gaussian
+2016-11-15 06:41:09,159     INFO  configuration: index_to_project : 0
+2016-11-15 06:41:09,160     INFO  configuration: l2_reg : 1e-05
+2016-11-15 06:41:09,160     INFO  configuration: warmup_momentum : 0.3
+2016-11-15 06:41:09,160     INFO  configuration: training_epochs : 25
+2016-11-15 06:41:09,160     INFO  configuration: hidden_activation : tanh
+2016-11-15 06:41:09,160     INFO  configuration: hidden_layer_type : ['TANH', 'TANH', 'TANH', 'TANH']
+2016-11-15 06:41:09,160     INFO  configuration: sequential_training : False
+2016-11-15 06:41:09,160     INFO  configuration: do_pretraining : False
+2016-11-15 06:41:09,160     INFO  configuration: projection_insize : 10000
+2016-11-15 06:41:09,161     INFO  configuration: l1_reg : 0.0
+2016-11-15 06:41:09,161     INFO  configuration: output_activation : linear
+2016-11-15 06:41:09,161     INFO  configuration: pretraining_lr : 0.0001
+2016-11-15 06:41:09,161     INFO  configuration: momentum : 0.9
+2016-11-15 06:41:09,161    DEBUG  configuration: configuration completed
+2016-11-15 06:41:09,161     INFO           main: Installation information:
+2016-11-15 06:41:09,161     INFO           main:   Merlin directory: /home/ashish/Text2Speech/TTSDNNRepo
+2016-11-15 06:41:09,162     INFO           main:   PATH:
+2016-11-15 06:41:09,162     INFO           main:       /home/ashish/.rbenv/plugins/ruby-build/bin
+2016-11-15 06:41:09,162     INFO           main:       /home/ashish/.rbenv/shims
+2016-11-15 06:41:09,162     INFO           main:       /home/ashish/.rbenv/bin
+2016-11-15 06:41:09,162     INFO           main:       /usr/local/sbin
+2016-11-15 06:41:09,162     INFO           main:       /usr/local/bin
+2016-11-15 06:41:09,162     INFO           main:       /usr/sbin
+2016-11-15 06:41:09,163     INFO           main:       /usr/bin
+2016-11-15 06:41:09,163     INFO           main:       /sbin
+2016-11-15 06:41:09,163     INFO           main:       /bin
+2016-11-15 06:41:09,163     INFO           main:       /usr/games
+2016-11-15 06:41:09,163     INFO           main:       /usr/local/games
+2016-11-15 06:41:09,163     INFO           main:       /opt/android-sdk/tools
+2016-11-15 06:41:09,163     INFO           main:       /opt/android-sdk/platform-tools
+2016-11-15 06:41:09,163     INFO           main:       /opt/node/bin
+2016-11-15 06:41:09,164     INFO           main:       /opt/gradle/bin
+2016-11-15 06:41:09,164     INFO           main:   LD_LIBRARY_PATH:
+2016-11-15 06:41:09,164     INFO           main:   Python version: 2.7.6 (default, Jun 22 2015, 17:58:13) [GCC 4.8.2]
+2016-11-15 06:41:09,164     INFO           main:     PYTHONPATH:
+2016-11-15 06:41:09,164     INFO           main:   Numpy version: 1.8.2
+2016-11-15 06:41:09,164     INFO           main:   Theano version: 0.8.1
+2016-11-15 06:41:09,164     INFO           main:     THEANO_FLAGS: cuda.root=/opt/6.5.19,floatX=float32,on_unused_input=ignore
+2016-11-15 06:41:09,165     INFO           main:     device: cpu
+2016-11-15 06:41:10,366     INFO           main:   Git is available in the working directory:
+2016-11-15 06:41:10,425     INFO           main:     Merlin version: 43f4daa
+2016-11-15 06:41:10,430     INFO           main:     branch: local
+2016-11-15 06:41:10,488     INFO           main:     diff to Merlin version:
+2016-11-15 06:41:10,488     INFO           main:       M egs/slt_arctic/s1/mylog.txt
+2016-11-15 06:41:10,488     INFO           main:       M egs/slt_arctic/s1/run_demo.sh
+2016-11-15 06:41:10,488     INFO           main:       M egs/slt_arctic/s1/scripts/setup.sh
+2016-11-15 06:41:10,488     INFO           main:       M misc/scripts/vocoder/world/extract_features_for_merlin.sh
+2016-11-15 06:41:10,488     INFO           main:       M src/run_merlin.py
+2016-11-15 06:41:10,488     INFO           main:       (all diffs logged in DNN_TANH_TANH_TANH_TANH_LINEAR__dur_50_259_4_512_0.002000_06_41AM_November_15_2016.log.gitdiff)
+2016-11-15 06:41:10,509     INFO           main: Execution information:
+2016-11-15 06:41:10,534     INFO           main:   HOSTNAME: ashish-HP
+2016-11-15 06:41:10,535     INFO           main:   USER: ashish
+2016-11-15 06:41:10,535     INFO           main:   PID: 15601
+2016-11-15 06:41:10,564    DEBUG           main: Loaded file id list from /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/file_id_list_demo.scp
+2016-11-15 06:41:10,606    DEBUG         labels: HTS-derived input feature dimension is 416 + 0 = 416
+2016-11-15 06:41:10,606     INFO           main: Input label dimension is 416
+2016-11-15 06:41:10,633    DEBUG           main: Loaded file id list from /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/test_synthesis/test_id_list.scp
+2016-11-15 06:41:10,633     INFO           main: preparing label data (input) using standard HTS style labels
+2016-11-15 06:41:10,652     INFO         labels: loaded /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/test_synthesis/prompt-lab/arctic_a0001.lab, 185 labels
+2016-11-15 06:41:10,690    DEBUG         labels: made label matrix of 37 frames x 416 labels
+2016-11-15 06:41:10,691     INFO         labels: loaded /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/test_synthesis/prompt-lab/arctic_a0002.lab, 210 labels
+2016-11-15 06:41:10,733    DEBUG         labels: made label matrix of 42 frames x 416 labels
+2016-11-15 06:41:10,734     INFO         labels: loaded /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/test_synthesis/prompt-lab/arctic_a0003.lab, 205 labels
+2016-11-15 06:41:10,773    DEBUG         labels: made label matrix of 41 frames x 416 labels
+2016-11-15 06:41:10,775     INFO         labels: loaded /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/test_synthesis/prompt-lab/arctic_a0004.lab, 140 labels
+2016-11-15 06:41:10,801    DEBUG         labels: made label matrix of 28 frames x 416 labels
+2016-11-15 06:41:10,802     INFO         labels: loaded /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/test_synthesis/prompt-lab/arctic_a0005.lab,  85 labels
+2016-11-15 06:41:10,819    DEBUG         labels: made label matrix of 17 frames x 416 labels
+2016-11-15 06:41:10,820     INFO         labels: loaded /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/test_synthesis/prompt-lab/arctic_a0056.lab, 165 labels
+2016-11-15 06:41:10,853    DEBUG         labels: made label matrix of 33 frames x 416 labels
+2016-11-15 06:41:10,854     INFO         labels: loaded /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/test_synthesis/prompt-lab/arctic_a0057.lab, 115 labels
+2016-11-15 06:41:10,877    DEBUG         labels: made label matrix of 23 frames x 416 labels
+2016-11-15 06:41:10,878     INFO         labels: loaded /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/test_synthesis/prompt-lab/arctic_a0058.lab, 235 labels
+2016-11-15 06:41:10,923    DEBUG         labels: made label matrix of 47 frames x 416 labels
+2016-11-15 06:41:10,924     INFO         labels: loaded /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/test_synthesis/prompt-lab/arctic_a0059.lab, 140 labels
+2016-11-15 06:41:10,951    DEBUG         labels: made label matrix of 28 frames x 416 labels
+2016-11-15 06:41:10,952     INFO         labels: loaded /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/test_synthesis/prompt-lab/arctic_a0060.lab, 110 labels
+2016-11-15 06:41:10,975    DEBUG         labels: made label matrix of 22 frames x 416 labels
+2016-11-15 06:41:10,998    DEBUG  acoustic_norm: MinMaxNormalisation created for feature dimension of 416
+2016-11-15 06:41:10,998     INFO  acoustic_norm: Loaded min max values from the trained data for feature dimension of 416
+2016-11-15 06:41:11,026    DEBUG         labels: HTS-derived input feature dimension is 416 + 0 = 416
+2016-11-15 06:41:11,027     INFO           main: label dimension is 416
+2016-11-15 06:41:11,027     INFO           main: generating from DNN
+2016-11-15 06:41:11,027    DEBUG dnn_generation: Starting dnn_generation
+2016-11-15 06:41:12,137     INFO dnn_generation: generating    1 of   10: /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/nn_no_silence_lab_norm_416/arctic_a0001.lab
+2016-11-15 06:41:14,594    DEBUG dnn_generation: saved to /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/test_synthesis/gen-lab/arctic_a0001.cmp
+2016-11-15 06:41:14,594     INFO dnn_generation: generating    2 of   10: /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/nn_no_silence_lab_norm_416/arctic_a0002.lab
+2016-11-15 06:41:14,779    DEBUG dnn_generation: saved to /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/test_synthesis/gen-lab/arctic_a0002.cmp
+2016-11-15 06:41:14,779     INFO dnn_generation: generating    3 of   10: /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/nn_no_silence_lab_norm_416/arctic_a0003.lab
+2016-11-15 06:41:14,916    DEBUG dnn_generation: saved to /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/test_synthesis/gen-lab/arctic_a0003.cmp
+2016-11-15 06:41:14,916     INFO dnn_generation: generating    4 of   10: /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/nn_no_silence_lab_norm_416/arctic_a0004.lab
+2016-11-15 06:41:15,006    DEBUG dnn_generation: saved to /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/test_synthesis/gen-lab/arctic_a0004.cmp
+2016-11-15 06:41:15,006     INFO dnn_generation: generating    5 of   10: /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/nn_no_silence_lab_norm_416/arctic_a0005.lab
+2016-11-15 06:41:15,090    DEBUG dnn_generation: saved to /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/test_synthesis/gen-lab/arctic_a0005.cmp
+2016-11-15 06:41:15,091     INFO dnn_generation: generating    6 of   10: /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/nn_no_silence_lab_norm_416/arctic_a0056.lab
+2016-11-15 06:41:15,184    DEBUG dnn_generation: saved to /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/test_synthesis/gen-lab/arctic_a0056.cmp
+2016-11-15 06:41:15,184     INFO dnn_generation: generating    7 of   10: /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/nn_no_silence_lab_norm_416/arctic_a0057.lab
+2016-11-15 06:41:15,272    DEBUG dnn_generation: saved to /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/test_synthesis/gen-lab/arctic_a0057.cmp
+2016-11-15 06:41:15,272     INFO dnn_generation: generating    8 of   10: /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/nn_no_silence_lab_norm_416/arctic_a0058.lab
+2016-11-15 06:41:15,379    DEBUG dnn_generation: saved to /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/test_synthesis/gen-lab/arctic_a0058.cmp
+2016-11-15 06:41:15,379     INFO dnn_generation: generating    9 of   10: /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/nn_no_silence_lab_norm_416/arctic_a0059.lab
+2016-11-15 06:41:15,471    DEBUG dnn_generation: saved to /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/test_synthesis/gen-lab/arctic_a0059.cmp
+2016-11-15 06:41:15,472     INFO dnn_generation: generating   10 of   10: /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/nn_no_silence_lab_norm_416/arctic_a0060.lab
+2016-11-15 06:41:15,556    DEBUG dnn_generation: saved to /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/test_synthesis/gen-lab/arctic_a0060.cmp
+2016-11-15 06:41:15,556    DEBUG           main: denormalising generated output using method MVN
+2016-11-15 06:41:15,598    DEBUGparam_generation: duration_decomposition for 10 files
+2016-11-15 06:41:15,599     INFOparam_generation: processing    1 of   10: /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/test_synthesis/gen-lab/arctic_a0001.cmp
+2016-11-15 06:41:15,599    DEBUGparam_generation: wrote to file /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/test_synthesis/gen-lab/arctic_a0001.dur
+2016-11-15 06:41:15,600     INFOparam_generation: processing    2 of   10: /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/test_synthesis/gen-lab/arctic_a0002.cmp
+2016-11-15 06:41:15,600    DEBUGparam_generation: wrote to file /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/test_synthesis/gen-lab/arctic_a0002.dur
+2016-11-15 06:41:15,601     INFOparam_generation: processing    3 of   10: /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/test_synthesis/gen-lab/arctic_a0003.cmp
+2016-11-15 06:41:15,601    DEBUGparam_generation: wrote to file /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/test_synthesis/gen-lab/arctic_a0003.dur
+2016-11-15 06:41:15,602     INFOparam_generation: processing    4 of   10: /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/test_synthesis/gen-lab/arctic_a0004.cmp
+2016-11-15 06:41:15,602    DEBUGparam_generation: wrote to file /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/test_synthesis/gen-lab/arctic_a0004.dur
+2016-11-15 06:41:15,602     INFOparam_generation: processing    5 of   10: /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/test_synthesis/gen-lab/arctic_a0005.cmp
+2016-11-15 06:41:15,603    DEBUGparam_generation: wrote to file /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/test_synthesis/gen-lab/arctic_a0005.dur
+2016-11-15 06:41:15,603     INFOparam_generation: processing    6 of   10: /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/test_synthesis/gen-lab/arctic_a0056.cmp
+2016-11-15 06:41:15,604    DEBUGparam_generation: wrote to file /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/test_synthesis/gen-lab/arctic_a0056.dur
+2016-11-15 06:41:15,604     INFOparam_generation: processing    7 of   10: /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/test_synthesis/gen-lab/arctic_a0057.cmp
+2016-11-15 06:41:15,605    DEBUGparam_generation: wrote to file /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/test_synthesis/gen-lab/arctic_a0057.dur
+2016-11-15 06:41:15,605     INFOparam_generation: processing    8 of   10: /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/test_synthesis/gen-lab/arctic_a0058.cmp
+2016-11-15 06:41:15,606    DEBUGparam_generation: wrote to file /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/test_synthesis/gen-lab/arctic_a0058.dur
+2016-11-15 06:41:15,606     INFOparam_generation: processing    9 of   10: /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/test_synthesis/gen-lab/arctic_a0059.cmp
+2016-11-15 06:41:15,606    DEBUGparam_generation: wrote to file /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/test_synthesis/gen-lab/arctic_a0059.dur
+2016-11-15 06:41:15,607     INFOparam_generation: processing   10 of   10: /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/test_synthesis/gen-lab/arctic_a0060.cmp
+2016-11-15 06:41:15,607    DEBUGparam_generation: wrote to file /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/test_synthesis/gen-lab/arctic_a0060.dur
+2016-11-15 06:41:15,608     INFO            dur: loaded /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/test_synthesis/prompt-lab/arctic_a0001.lab, 185 labels
+2016-11-15 06:41:15,613    DEBUG            dur: modifed label with predicted duration of 35 frames x 5 features
+2016-11-15 06:41:15,614     INFO            dur: loaded /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/test_synthesis/prompt-lab/arctic_a0002.lab, 210 labels
+2016-11-15 06:41:15,620    DEBUG            dur: modifed label with predicted duration of 40 frames x 5 features
+2016-11-15 06:41:15,620     INFO            dur: loaded /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/test_synthesis/prompt-lab/arctic_a0003.lab, 205 labels
+2016-11-15 06:41:15,626    DEBUG            dur: modifed label with predicted duration of 39 frames x 5 features
+2016-11-15 06:41:15,626     INFO            dur: loaded /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/test_synthesis/prompt-lab/arctic_a0004.lab, 140 labels
+2016-11-15 06:41:15,630    DEBUG            dur: modifed label with predicted duration of 26 frames x 5 features
+2016-11-15 06:41:15,630     INFO            dur: loaded /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/test_synthesis/prompt-lab/arctic_a0005.lab,  85 labels
+2016-11-15 06:41:15,633    DEBUG            dur: modifed label with predicted duration of 15 frames x 5 features
+2016-11-15 06:41:15,633     INFO            dur: loaded /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/test_synthesis/prompt-lab/arctic_a0056.lab, 165 labels
+2016-11-15 06:41:15,637    DEBUG            dur: modifed label with predicted duration of 31 frames x 5 features
+2016-11-15 06:41:15,638     INFO            dur: loaded /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/test_synthesis/prompt-lab/arctic_a0057.lab, 115 labels
+2016-11-15 06:41:15,641    DEBUG            dur: modifed label with predicted duration of 21 frames x 5 features
+2016-11-15 06:41:15,641     INFO            dur: loaded /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/test_synthesis/prompt-lab/arctic_a0058.lab, 235 labels
+2016-11-15 06:41:15,646    DEBUG            dur: modifed label with predicted duration of 45 frames x 5 features
+2016-11-15 06:41:15,647     INFO            dur: loaded /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/test_synthesis/prompt-lab/arctic_a0059.lab, 140 labels
+2016-11-15 06:41:15,650    DEBUG            dur: modifed label with predicted duration of 26 frames x 5 features
+2016-11-15 06:41:15,651     INFO            dur: loaded /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/test_synthesis/prompt-lab/arctic_a0060.lab, 110 labels
+2016-11-15 06:41:15,653    DEBUG            dur: modifed label with predicted duration of 20 frames x 5 features

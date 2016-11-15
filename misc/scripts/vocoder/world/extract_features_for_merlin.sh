@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # top merlin directory
-merlin_dir="/afs/inf.ed.ac.uk/group/cstr/projects/phd/s1432486/work/test/merlin"
+merlin_dir="/home/ashish/Text2Speech/TTSDNNRepo"
 
 # tools directory
 world="${merlin_dir}/tools/bin/WORLD"
@@ -54,7 +54,7 @@ do
    
     ### WORLD ANALYSIS -- extract vocoder parameters ###
 
-    ### extract f0, sp, ap ### 
+    ### extract f0, sp, bapd ### 
     $world/analysis ${wav_dir}/$file_id.wav ${f0_dir}/$file_id.f0 ${sp_dir}/$file_id.sp ${bap_dir}/$file_id.bapd
 
     ### convert f0 to lf0 ###

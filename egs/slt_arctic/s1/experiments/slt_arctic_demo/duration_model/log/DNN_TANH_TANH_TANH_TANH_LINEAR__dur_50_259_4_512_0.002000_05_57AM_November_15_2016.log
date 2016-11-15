@@ -1,0 +1,626 @@
+2016-11-15 05:57:17,636     INFO  configuration: logging is now fully configured
+2016-11-15 05:57:17,636    DEBUG  configuration: setting up output features
+2016-11-15 05:57:17,637    DEBUG  configuration:  dur
+2016-11-15 05:57:17,637     INFO  configuration:   in_dimension: 5
+2016-11-15 05:57:17,637     INFO  configuration:   out_dimension : 5
+2016-11-15 05:57:17,637     INFO  configuration:   in_directory : /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/dur
+2016-11-15 05:57:17,637     INFO  configuration: multistream dimensions: [5]
+2016-11-15 05:57:17,637     INFO  configuration: use_rprop : 0
+2016-11-15 05:57:17,637     INFO  configuration: dropout_rate : 0.0
+2016-11-15 05:57:17,637     INFO  configuration: projection_outsize : 10
+2016-11-15 05:57:17,637     INFO  configuration: early_stop_epochs : 5
+2016-11-15 05:57:17,637     INFO  configuration: warmup_epoch : 10
+2016-11-15 05:57:17,638     INFO  configuration: learning_rate : 0.002
+2016-11-15 05:57:17,638     INFO  configuration: layers_with_projection_input : [0]
+2016-11-15 05:57:17,638     INFO  configuration: batch_size : 64
+2016-11-15 05:57:17,638     INFO  configuration: model_type : DNN
+2016-11-15 05:57:17,638     INFO  configuration: hidden_layer_size : [512, 512, 512, 512]
+2016-11-15 05:57:17,638     INFO  configuration: projection_learning_rate_scaling : 1.0
+2016-11-15 05:57:17,638     INFO  configuration: pretraining_epochs : 10
+2016-11-15 05:57:17,638     INFO  configuration: initial_projection_distrib : gaussian
+2016-11-15 05:57:17,638     INFO  configuration: index_to_project : 0
+2016-11-15 05:57:17,638     INFO  configuration: l2_reg : 1e-05
+2016-11-15 05:57:17,638     INFO  configuration: warmup_momentum : 0.3
+2016-11-15 05:57:17,639     INFO  configuration: training_epochs : 25
+2016-11-15 05:57:17,639     INFO  configuration: hidden_activation : tanh
+2016-11-15 05:57:17,639     INFO  configuration: hidden_layer_type : ['TANH', 'TANH', 'TANH', 'TANH']
+2016-11-15 05:57:17,639     INFO  configuration: sequential_training : False
+2016-11-15 05:57:17,639     INFO  configuration: do_pretraining : False
+2016-11-15 05:57:17,639     INFO  configuration: projection_insize : 10000
+2016-11-15 05:57:17,639     INFO  configuration: l1_reg : 0.0
+2016-11-15 05:57:17,639     INFO  configuration: output_activation : linear
+2016-11-15 05:57:17,639     INFO  configuration: pretraining_lr : 0.0001
+2016-11-15 05:57:17,639     INFO  configuration: momentum : 0.9
+2016-11-15 05:57:17,639    DEBUG  configuration: configuration completed
+2016-11-15 05:57:17,640     INFO           main: Installation information:
+2016-11-15 05:57:17,640     INFO           main:   Merlin directory: /home/ashish/Text2Speech/TTSDNNRepo
+2016-11-15 05:57:17,640     INFO           main:   PATH:
+2016-11-15 05:57:17,640     INFO           main:       /home/ashish/.rbenv/plugins/ruby-build/bin
+2016-11-15 05:57:17,640     INFO           main:       /home/ashish/.rbenv/shims
+2016-11-15 05:57:17,640     INFO           main:       /home/ashish/.rbenv/bin
+2016-11-15 05:57:17,640     INFO           main:       /usr/local/sbin
+2016-11-15 05:57:17,640     INFO           main:       /usr/local/bin
+2016-11-15 05:57:17,640     INFO           main:       /usr/sbin
+2016-11-15 05:57:17,640     INFO           main:       /usr/bin
+2016-11-15 05:57:17,641     INFO           main:       /sbin
+2016-11-15 05:57:17,641     INFO           main:       /bin
+2016-11-15 05:57:17,641     INFO           main:       /usr/games
+2016-11-15 05:57:17,641     INFO           main:       /usr/local/games
+2016-11-15 05:57:17,641     INFO           main:       /opt/android-sdk/tools
+2016-11-15 05:57:17,641     INFO           main:       /opt/android-sdk/platform-tools
+2016-11-15 05:57:17,641     INFO           main:       /opt/node/bin
+2016-11-15 05:57:17,641     INFO           main:       /opt/gradle/bin
+2016-11-15 05:57:17,641     INFO           main:   LD_LIBRARY_PATH:
+2016-11-15 05:57:17,641     INFO           main:   Python version: 2.7.6 (default, Jun 22 2015, 17:58:13) [GCC 4.8.2]
+2016-11-15 05:57:17,641     INFO           main:     PYTHONPATH:
+2016-11-15 05:57:17,642     INFO           main:   Numpy version: 1.8.2
+2016-11-15 05:57:17,642     INFO           main:   Theano version: 0.8.1
+2016-11-15 05:57:17,642     INFO           main:     THEANO_FLAGS: cuda.root=/opt/6.5.19,floatX=float32,on_unused_input=ignore
+2016-11-15 05:57:17,642     INFO           main:     device: cpu
+2016-11-15 05:57:17,682     INFO           main:   Git is available in the working directory:
+2016-11-15 05:57:17,690     INFO           main:     Merlin version: 43f4daa
+2016-11-15 05:57:17,696     INFO           main:     branch: local
+2016-11-15 05:57:17,706     INFO           main:     diff to Merlin version:
+2016-11-15 05:57:17,707     INFO           main:       M egs/slt_arctic/s1/mylog.txt
+2016-11-15 05:57:17,707     INFO           main:       M egs/slt_arctic/s1/run_demo.sh
+2016-11-15 05:57:17,707     INFO           main:       M egs/slt_arctic/s1/scripts/setup.sh
+2016-11-15 05:57:17,707     INFO           main:       M src/run_merlin.py
+2016-11-15 05:57:17,707     INFO           main:       (all diffs logged in DNN_TANH_TANH_TANH_TANH_LINEAR__dur_50_259_4_512_0.002000_05_57AM_November_15_2016.log.gitdiff)
+2016-11-15 05:57:17,727     INFO           main: Execution information:
+2016-11-15 05:57:17,728     INFO           main:   HOSTNAME: ashish-HP
+2016-11-15 05:57:17,728     INFO           main:   USER: ashish
+2016-11-15 05:57:17,728     INFO           main:   PID: 13309
+2016-11-15 05:57:17,729    DEBUG           main: Loaded file id list from /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/file_id_list_demo.scp
+2016-11-15 05:57:17,755    DEBUG         labels: HTS-derived input feature dimension is 416 + 0 = 416
+2016-11-15 05:57:17,755     INFO           main: Input label dimension is 416
+2016-11-15 05:57:17,755     INFO           main: preparing label data (input) using standard HTS style labels
+2016-11-15 05:57:17,756     INFO         labels: loaded /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/label_state_align/arctic_a0001.lab, 185 labels
+2016-11-15 05:57:17,790    DEBUG         labels: made label matrix of 37 frames x 416 labels
+2016-11-15 05:57:17,791     INFO         labels: loaded /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/label_state_align/arctic_a0002.lab, 210 labels
+2016-11-15 05:57:17,831    DEBUG         labels: made label matrix of 42 frames x 416 labels
+2016-11-15 05:57:17,831     INFO         labels: loaded /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/label_state_align/arctic_a0003.lab, 205 labels
+2016-11-15 05:57:17,870    DEBUG         labels: made label matrix of 41 frames x 416 labels
+2016-11-15 05:57:17,870     INFO         labels: loaded /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/label_state_align/arctic_a0004.lab, 140 labels
+2016-11-15 05:57:17,896    DEBUG         labels: made label matrix of 28 frames x 416 labels
+2016-11-15 05:57:17,896     INFO         labels: loaded /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/label_state_align/arctic_a0005.lab,  85 labels
+2016-11-15 05:57:17,912    DEBUG         labels: made label matrix of 17 frames x 416 labels
+2016-11-15 05:57:17,912     INFO         labels: loaded /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/label_state_align/arctic_a0006.lab, 165 labels
+2016-11-15 05:57:17,943    DEBUG         labels: made label matrix of 33 frames x 416 labels
+2016-11-15 05:57:17,943     INFO         labels: loaded /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/label_state_align/arctic_a0007.lab, 200 labels
+2016-11-15 05:57:17,979    DEBUG         labels: made label matrix of 40 frames x 416 labels
+2016-11-15 05:57:17,980     INFO         labels: loaded /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/label_state_align/arctic_a0008.lab, 120 labels
+2016-11-15 05:57:18,001    DEBUG         labels: made label matrix of 24 frames x 416 labels
+2016-11-15 05:57:18,002     INFO         labels: loaded /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/label_state_align/arctic_a0009.lab, 200 labels
+2016-11-15 05:57:18,038    DEBUG         labels: made label matrix of 40 frames x 416 labels
+2016-11-15 05:57:18,038     INFO         labels: loaded /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/label_state_align/arctic_a0010.lab, 205 labels
+2016-11-15 05:57:18,076    DEBUG         labels: made label matrix of 41 frames x 416 labels
+2016-11-15 05:57:18,076     INFO         labels: loaded /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/label_state_align/arctic_a0011.lab, 170 labels
+2016-11-15 05:57:18,108    DEBUG         labels: made label matrix of 34 frames x 416 labels
+2016-11-15 05:57:18,108     INFO         labels: loaded /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/label_state_align/arctic_a0012.lab, 180 labels
+2016-11-15 05:57:18,141    DEBUG         labels: made label matrix of 36 frames x 416 labels
+2016-11-15 05:57:18,141     INFO         labels: loaded /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/label_state_align/arctic_a0013.lab, 260 labels
+2016-11-15 05:57:18,189    DEBUG         labels: made label matrix of 52 frames x 416 labels
+2016-11-15 05:57:18,189     INFO         labels: loaded /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/label_state_align/arctic_a0014.lab, 180 labels
+2016-11-15 05:57:18,223    DEBUG         labels: made label matrix of 36 frames x 416 labels
+2016-11-15 05:57:18,223     INFO         labels: loaded /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/label_state_align/arctic_a0015.lab,  95 labels
+2016-11-15 05:57:18,241    DEBUG         labels: made label matrix of 19 frames x 416 labels
+2016-11-15 05:57:18,242     INFO         labels: loaded /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/label_state_align/arctic_a0016.lab, 205 labels
+2016-11-15 05:57:18,278    DEBUG         labels: made label matrix of 41 frames x 416 labels
+2016-11-15 05:57:18,279     INFO         labels: loaded /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/label_state_align/arctic_a0017.lab, 275 labels
+2016-11-15 05:57:18,329    DEBUG         labels: made label matrix of 55 frames x 416 labels
+2016-11-15 05:57:18,330     INFO         labels: loaded /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/label_state_align/arctic_a0018.lab,  75 labels
+2016-11-15 05:57:18,344    DEBUG         labels: made label matrix of 15 frames x 416 labels
+2016-11-15 05:57:18,344     INFO         labels: loaded /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/label_state_align/arctic_a0019.lab, 220 labels
+2016-11-15 05:57:18,384    DEBUG         labels: made label matrix of 44 frames x 416 labels
+2016-11-15 05:57:18,384     INFO         labels: loaded /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/label_state_align/arctic_a0020.lab, 195 labels
+2016-11-15 05:57:18,422    DEBUG         labels: made label matrix of 39 frames x 416 labels
+2016-11-15 05:57:18,422     INFO         labels: loaded /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/label_state_align/arctic_a0021.lab, 160 labels
+2016-11-15 05:57:18,452    DEBUG         labels: made label matrix of 32 frames x 416 labels
+2016-11-15 05:57:18,453     INFO         labels: loaded /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/label_state_align/arctic_a0022.lab, 270 labels
+2016-11-15 05:57:18,502    DEBUG         labels: made label matrix of 54 frames x 416 labels
+2016-11-15 05:57:18,503     INFO         labels: loaded /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/label_state_align/arctic_a0023.lab, 360 labels
+2016-11-15 05:57:18,569    DEBUG         labels: made label matrix of 72 frames x 416 labels
+2016-11-15 05:57:18,570     INFO         labels: loaded /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/label_state_align/arctic_a0024.lab, 245 labels
+2016-11-15 05:57:18,614    DEBUG         labels: made label matrix of 49 frames x 416 labels
+2016-11-15 05:57:18,615     INFO         labels: loaded /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/label_state_align/arctic_a0025.lab, 190 labels
+2016-11-15 05:57:18,650    DEBUG         labels: made label matrix of 38 frames x 416 labels
+2016-11-15 05:57:18,651     INFO         labels: loaded /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/label_state_align/arctic_a0026.lab, 185 labels
+2016-11-15 05:57:18,685    DEBUG         labels: made label matrix of 37 frames x 416 labels
+2016-11-15 05:57:18,685     INFO         labels: loaded /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/label_state_align/arctic_a0027.lab, 240 labels
+2016-11-15 05:57:18,730    DEBUG         labels: made label matrix of 48 frames x 416 labels
+2016-11-15 05:57:18,731     INFO         labels: loaded /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/label_state_align/arctic_a0028.lab,  85 labels
+2016-11-15 05:57:18,746    DEBUG         labels: made label matrix of 17 frames x 416 labels
+2016-11-15 05:57:18,747     INFO         labels: loaded /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/label_state_align/arctic_a0029.lab, 200 labels
+2016-11-15 05:57:18,784    DEBUG         labels: made label matrix of 40 frames x 416 labels
+2016-11-15 05:57:18,784     INFO         labels: loaded /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/label_state_align/arctic_a0030.lab,  70 labels
+2016-11-15 05:57:18,798    DEBUG         labels: made label matrix of 14 frames x 416 labels
+2016-11-15 05:57:18,798     INFO         labels: loaded /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/label_state_align/arctic_a0031.lab, 130 labels
+2016-11-15 05:57:18,822    DEBUG         labels: made label matrix of 26 frames x 416 labels
+2016-11-15 05:57:18,823     INFO         labels: loaded /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/label_state_align/arctic_a0032.lab, 240 labels
+2016-11-15 05:57:18,866    DEBUG         labels: made label matrix of 48 frames x 416 labels
+2016-11-15 05:57:18,867     INFO         labels: loaded /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/label_state_align/arctic_a0033.lab, 240 labels
+2016-11-15 05:57:18,911    DEBUG         labels: made label matrix of 48 frames x 416 labels
+2016-11-15 05:57:18,911     INFO         labels: loaded /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/label_state_align/arctic_a0034.lab, 220 labels
+2016-11-15 05:57:18,952    DEBUG         labels: made label matrix of 44 frames x 416 labels
+2016-11-15 05:57:18,952     INFO         labels: loaded /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/label_state_align/arctic_a0035.lab, 235 labels
+2016-11-15 05:57:18,996    DEBUG         labels: made label matrix of 47 frames x 416 labels
+2016-11-15 05:57:18,997     INFO         labels: loaded /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/label_state_align/arctic_a0036.lab,  95 labels
+2016-11-15 05:57:19,015    DEBUG         labels: made label matrix of 19 frames x 416 labels
+2016-11-15 05:57:19,016     INFO         labels: loaded /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/label_state_align/arctic_a0037.lab, 140 labels
+2016-11-15 05:57:19,042    DEBUG         labels: made label matrix of 28 frames x 416 labels
+2016-11-15 05:57:19,043     INFO         labels: loaded /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/label_state_align/arctic_a0038.lab, 105 labels
+2016-11-15 05:57:19,062    DEBUG         labels: made label matrix of 21 frames x 416 labels
+2016-11-15 05:57:19,063     INFO         labels: loaded /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/label_state_align/arctic_a0039.lab, 155 labels
+2016-11-15 05:57:19,093    DEBUG         labels: made label matrix of 31 frames x 416 labels
+2016-11-15 05:57:19,093     INFO         labels: loaded /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/label_state_align/arctic_a0040.lab, 155 labels
+2016-11-15 05:57:19,123    DEBUG         labels: made label matrix of 31 frames x 416 labels
+2016-11-15 05:57:19,123     INFO         labels: loaded /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/label_state_align/arctic_a0041.lab, 125 labels
+2016-11-15 05:57:19,146    DEBUG         labels: made label matrix of 25 frames x 416 labels
+2016-11-15 05:57:19,146     INFO         labels: loaded /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/label_state_align/arctic_a0042.lab, 170 labels
+2016-11-15 05:57:19,177    DEBUG         labels: made label matrix of 34 frames x 416 labels
+2016-11-15 05:57:19,177     INFO         labels: loaded /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/label_state_align/arctic_a0043.lab, 230 labels
+2016-11-15 05:57:19,219    DEBUG         labels: made label matrix of 46 frames x 416 labels
+2016-11-15 05:57:19,220     INFO         labels: loaded /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/label_state_align/arctic_a0044.lab, 195 labels
+2016-11-15 05:57:19,256    DEBUG         labels: made label matrix of 39 frames x 416 labels
+2016-11-15 05:57:19,290     INFO         labels: loaded /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/label_state_align/arctic_a0045.lab, 150 labels
+2016-11-15 05:57:19,338    DEBUG         labels: made label matrix of 30 frames x 416 labels
+2016-11-15 05:57:19,339     INFO         labels: loaded /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/label_state_align/arctic_a0046.lab, 175 labels
+2016-11-15 05:57:19,385    DEBUG         labels: made label matrix of 35 frames x 416 labels
+2016-11-15 05:57:19,386     INFO         labels: loaded /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/label_state_align/arctic_a0047.lab, 195 labels
+2016-11-15 05:57:19,429    DEBUG         labels: made label matrix of 39 frames x 416 labels
+2016-11-15 05:57:19,429     INFO         labels: loaded /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/label_state_align/arctic_a0048.lab, 150 labels
+2016-11-15 05:57:19,457    DEBUG         labels: made label matrix of 30 frames x 416 labels
+2016-11-15 05:57:19,457     INFO         labels: loaded /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/label_state_align/arctic_a0049.lab, 180 labels
+2016-11-15 05:57:19,490    DEBUG         labels: made label matrix of 36 frames x 416 labels
+2016-11-15 05:57:19,491     INFO         labels: loaded /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/label_state_align/arctic_a0050.lab, 240 labels
+2016-11-15 05:57:19,534    DEBUG         labels: made label matrix of 48 frames x 416 labels
+2016-11-15 05:57:19,535     INFO         labels: loaded /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/label_state_align/arctic_a0051.lab, 235 labels
+2016-11-15 05:57:19,578    DEBUG         labels: made label matrix of 47 frames x 416 labels
+2016-11-15 05:57:19,579     INFO         labels: loaded /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/label_state_align/arctic_a0052.lab, 125 labels
+2016-11-15 05:57:19,603    DEBUG         labels: made label matrix of 25 frames x 416 labels
+2016-11-15 05:57:19,603     INFO         labels: loaded /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/label_state_align/arctic_a0053.lab, 205 labels
+2016-11-15 05:57:19,641    DEBUG         labels: made label matrix of 41 frames x 416 labels
+2016-11-15 05:57:19,642     INFO         labels: loaded /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/label_state_align/arctic_a0054.lab, 100 labels
+2016-11-15 05:57:19,661    DEBUG         labels: made label matrix of 20 frames x 416 labels
+2016-11-15 05:57:19,661     INFO         labels: loaded /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/label_state_align/arctic_a0055.lab, 250 labels
+2016-11-15 05:57:19,707    DEBUG         labels: made label matrix of 50 frames x 416 labels
+2016-11-15 05:57:19,707     INFO         labels: loaded /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/label_state_align/arctic_a0056.lab, 165 labels
+2016-11-15 05:57:19,738    DEBUG         labels: made label matrix of 33 frames x 416 labels
+2016-11-15 05:57:19,739     INFO         labels: loaded /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/label_state_align/arctic_a0057.lab, 115 labels
+2016-11-15 05:57:19,760    DEBUG         labels: made label matrix of 23 frames x 416 labels
+2016-11-15 05:57:19,760     INFO         labels: loaded /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/label_state_align/arctic_a0058.lab, 235 labels
+2016-11-15 05:57:19,803    DEBUG         labels: made label matrix of 47 frames x 416 labels
+2016-11-15 05:57:19,803     INFO         labels: loaded /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/label_state_align/arctic_a0059.lab, 140 labels
+2016-11-15 05:57:19,830    DEBUG         labels: made label matrix of 28 frames x 416 labels
+2016-11-15 05:57:19,830     INFO         labels: loaded /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/label_state_align/arctic_a0060.lab, 110 labels
+2016-11-15 05:57:19,850    DEBUG         labels: made label matrix of 22 frames x 416 labels
+2016-11-15 05:57:19,993    DEBUG  acoustic_norm: MinMaxNormalisation created for feature dimension of 416
+2016-11-15 05:57:19,999     INFO  acoustic_norm: across 50 files found min/max values of length 416:
+2016-11-15 05:57:20,009     INFO  acoustic_norm:   min: [[ 0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.
+   0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.
+   0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.
+   0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.
+   0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.
+   0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.
+   0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.
+   0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.
+   0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.
+   0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.
+   0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.
+   0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.
+   0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.
+   0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.
+   0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.
+   0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.
+   0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.
+   0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.
+   0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.
+   0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.
+   0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0. -1. -1.  0.  0.  0.
+  -1. -1. -1. -1. -1. -1. -1. -1. -1. -1. -1. -1. -1. -1. -1.  0.  0.  0.
+   0. -1. -1. -1. -1. -1. -1. -1.  0.  0.  0. -1. -1.  1. -1.  0.  0.  5.
+   3.  0.]]
+2016-11-15 05:57:20,019     INFO  acoustic_norm:   max: [[  1.   1.   1.   1.   1.   1.   1.   1.   1.   1.   1.   1.   1.   1.
+    1.   1.   1.   1.   1.   1.   1.   1.   1.   1.   1.   1.   1.   1.
+    1.   1.   1.   1.   1.   1.   1.   1.   1.   1.   1.   1.   1.   1.
+    1.   1.   1.   1.   1.   1.   1.   1.   1.   1.   1.   1.   1.   1.
+    1.   1.   1.   1.   1.   1.   1.   1.   0.   1.   1.   1.   1.   1.
+    0.   1.   0.   0.   0.   1.   1.   1.   1.   1.   0.   1.   1.   1.
+    1.   1.   1.   1.   0.   1.   1.   0.   1.   1.   1.   1.   1.   1.
+    1.   1.   1.   1.   1.   1.   0.   1.   1.   1.   1.   1.   1.   1.
+    0.   1.   1.   1.   1.   1.   0.   1.   0.   0.   0.   1.   1.   1.
+    1.   1.   0.   1.   1.   1.   1.   1.   1.   1.   0.   1.   1.   0.
+    1.   1.   1.   1.   1.   1.   1.   1.   1.   1.   1.   1.   0.   1.
+    1.   1.   1.   1.   1.   1.   0.   1.   1.   1.   1.   1.   0.   1.
+    0.   0.   0.   1.   1.   1.   1.   1.   0.   1.   1.   1.   1.   1.
+    1.   1.   0.   1.   1.   0.   1.   1.   1.   1.   1.   1.   1.   1.
+    1.   1.   1.   1.   0.   1.   1.   1.   1.   1.   1.   1.   0.   1.
+    1.   1.   1.   1.   0.   1.   0.   0.   0.   1.   1.   1.   1.   1.
+    0.   1.   1.   1.   1.   1.   1.   1.   0.   1.   1.   0.   1.   1.
+    1.   1.   1.   1.   1.   1.   1.   1.   1.   1.   0.   1.   1.   1.
+    1.   1.   1.   1.   0.   1.   1.   1.   1.   1.   0.   1.   0.   0.
+    0.   1.   1.   1.   1.   1.   0.   1.   1.   1.   1.   1.   1.   1.
+    0.   1.   1.   0.   1.   1.   1.   1.   1.   1.   1.   1.   1.   1.
+    1.   1.   0.   1.   1.   1.   1.   1.   1.   1.   1.   1.   1.   1.
+    1.   1.   1.   1.   1.   1.   1.   1.   1.   1.   1.   1.   1.   1.
+    1.   1.   1.   1.   0.   1.   1.   0.   0.   0.   1.   1.   1.   1.
+    1.   0.   1.   1.   1.   1.   1.   1.   1.   1.   1.   1.   0.   1.
+    1.   1.   1.   1.   1.   1.   1.   1.   1.   0.   1.   1.   1.   1.
+    1.   1.   1.   1.   1.   1.   0.   1.   1.   6.   6.   1.   1.   6.
+    1.   1.   6.   5.   5.  18.  18.   9.  10.   5.   6.   4.   4.  16.
+   16.   1.   1.   6.   5.   5.  10.  10.   8.   7.   4.   5.   5.  18.
+    9.  18.  10.   3.  -1.  13.   8.  28.  13.   3.]]
+2016-11-15 05:57:20,046     INFO           main: saved 416 vectors to /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/label_norm_HTS_416.dat
+2016-11-15 05:57:20,046     INFO           main: creating duration (output) features
+2016-11-15 05:57:20,046     INFO            dur: loaded /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/label_state_align/arctic_a0001.lab, 185 labels
+2016-11-15 05:57:20,050    DEBUG            dur: made duration matrix of 37 frames x 5 features
+2016-11-15 05:57:20,051     INFO            dur: loaded /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/label_state_align/arctic_a0002.lab, 210 labels
+2016-11-15 05:57:20,055    DEBUG            dur: made duration matrix of 42 frames x 5 features
+2016-11-15 05:57:20,055     INFO            dur: loaded /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/label_state_align/arctic_a0003.lab, 205 labels
+2016-11-15 05:57:20,059    DEBUG            dur: made duration matrix of 41 frames x 5 features
+2016-11-15 05:57:20,060     INFO            dur: loaded /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/label_state_align/arctic_a0004.lab, 140 labels
+2016-11-15 05:57:20,063    DEBUG            dur: made duration matrix of 28 frames x 5 features
+2016-11-15 05:57:20,063     INFO            dur: loaded /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/label_state_align/arctic_a0005.lab,  85 labels
+2016-11-15 05:57:20,065    DEBUG            dur: made duration matrix of 17 frames x 5 features
+2016-11-15 05:57:20,065     INFO            dur: loaded /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/label_state_align/arctic_a0006.lab, 165 labels
+2016-11-15 05:57:20,068    DEBUG            dur: made duration matrix of 33 frames x 5 features
+2016-11-15 05:57:20,068     INFO            dur: loaded /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/label_state_align/arctic_a0007.lab, 200 labels
+2016-11-15 05:57:20,073    DEBUG            dur: made duration matrix of 40 frames x 5 features
+2016-11-15 05:57:20,073     INFO            dur: loaded /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/label_state_align/arctic_a0008.lab, 120 labels
+2016-11-15 05:57:20,075    DEBUG            dur: made duration matrix of 24 frames x 5 features
+2016-11-15 05:57:20,076     INFO            dur: loaded /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/label_state_align/arctic_a0009.lab, 200 labels
+2016-11-15 05:57:20,079    DEBUG            dur: made duration matrix of 40 frames x 5 features
+2016-11-15 05:57:20,080     INFO            dur: loaded /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/label_state_align/arctic_a0010.lab, 205 labels
+2016-11-15 05:57:20,084    DEBUG            dur: made duration matrix of 41 frames x 5 features
+2016-11-15 05:57:20,084     INFO            dur: loaded /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/label_state_align/arctic_a0011.lab, 170 labels
+2016-11-15 05:57:20,087    DEBUG            dur: made duration matrix of 34 frames x 5 features
+2016-11-15 05:57:20,088     INFO            dur: loaded /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/label_state_align/arctic_a0012.lab, 180 labels
+2016-11-15 05:57:20,091    DEBUG            dur: made duration matrix of 36 frames x 5 features
+2016-11-15 05:57:20,092     INFO            dur: loaded /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/label_state_align/arctic_a0013.lab, 260 labels
+2016-11-15 05:57:20,097    DEBUG            dur: made duration matrix of 52 frames x 5 features
+2016-11-15 05:57:20,097     INFO            dur: loaded /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/label_state_align/arctic_a0014.lab, 180 labels
+2016-11-15 05:57:20,101    DEBUG            dur: made duration matrix of 36 frames x 5 features
+2016-11-15 05:57:20,101     INFO            dur: loaded /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/label_state_align/arctic_a0015.lab,  95 labels
+2016-11-15 05:57:20,103    DEBUG            dur: made duration matrix of 19 frames x 5 features
+2016-11-15 05:57:20,103     INFO            dur: loaded /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/label_state_align/arctic_a0016.lab, 205 labels
+2016-11-15 05:57:20,107    DEBUG            dur: made duration matrix of 41 frames x 5 features
+2016-11-15 05:57:20,108     INFO            dur: loaded /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/label_state_align/arctic_a0017.lab, 275 labels
+2016-11-15 05:57:20,114    DEBUG            dur: made duration matrix of 55 frames x 5 features
+2016-11-15 05:57:20,114     INFO            dur: loaded /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/label_state_align/arctic_a0018.lab,  75 labels
+2016-11-15 05:57:20,116    DEBUG            dur: made duration matrix of 15 frames x 5 features
+2016-11-15 05:57:20,116     INFO            dur: loaded /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/label_state_align/arctic_a0019.lab, 220 labels
+2016-11-15 05:57:20,121    DEBUG            dur: made duration matrix of 44 frames x 5 features
+2016-11-15 05:57:20,121     INFO            dur: loaded /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/label_state_align/arctic_a0020.lab, 195 labels
+2016-11-15 05:57:20,125    DEBUG            dur: made duration matrix of 39 frames x 5 features
+2016-11-15 05:57:20,126     INFO            dur: loaded /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/label_state_align/arctic_a0021.lab, 160 labels
+2016-11-15 05:57:20,129    DEBUG            dur: made duration matrix of 32 frames x 5 features
+2016-11-15 05:57:20,129     INFO            dur: loaded /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/label_state_align/arctic_a0022.lab, 270 labels
+2016-11-15 05:57:20,134    DEBUG            dur: made duration matrix of 54 frames x 5 features
+2016-11-15 05:57:20,135     INFO            dur: loaded /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/label_state_align/arctic_a0023.lab, 360 labels
+2016-11-15 05:57:20,143    DEBUG            dur: made duration matrix of 72 frames x 5 features
+2016-11-15 05:57:20,143     INFO            dur: loaded /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/label_state_align/arctic_a0024.lab, 245 labels
+2016-11-15 05:57:20,148    DEBUG            dur: made duration matrix of 49 frames x 5 features
+2016-11-15 05:57:20,148     INFO            dur: loaded /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/label_state_align/arctic_a0025.lab, 190 labels
+2016-11-15 05:57:20,152    DEBUG            dur: made duration matrix of 38 frames x 5 features
+2016-11-15 05:57:20,153     INFO            dur: loaded /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/label_state_align/arctic_a0026.lab, 185 labels
+2016-11-15 05:57:20,157    DEBUG            dur: made duration matrix of 37 frames x 5 features
+2016-11-15 05:57:20,157     INFO            dur: loaded /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/label_state_align/arctic_a0027.lab, 240 labels
+2016-11-15 05:57:20,162    DEBUG            dur: made duration matrix of 48 frames x 5 features
+2016-11-15 05:57:20,162     INFO            dur: loaded /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/label_state_align/arctic_a0028.lab,  85 labels
+2016-11-15 05:57:20,164    DEBUG            dur: made duration matrix of 17 frames x 5 features
+2016-11-15 05:57:20,164     INFO            dur: loaded /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/label_state_align/arctic_a0029.lab, 200 labels
+2016-11-15 05:57:20,168    DEBUG            dur: made duration matrix of 40 frames x 5 features
+2016-11-15 05:57:20,168     INFO            dur: loaded /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/label_state_align/arctic_a0030.lab,  70 labels
+2016-11-15 05:57:20,170    DEBUG            dur: made duration matrix of 14 frames x 5 features
+2016-11-15 05:57:20,170     INFO            dur: loaded /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/label_state_align/arctic_a0031.lab, 130 labels
+2016-11-15 05:57:20,173    DEBUG            dur: made duration matrix of 26 frames x 5 features
+2016-11-15 05:57:20,174     INFO            dur: loaded /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/label_state_align/arctic_a0032.lab, 240 labels
+2016-11-15 05:57:20,178    DEBUG            dur: made duration matrix of 48 frames x 5 features
+2016-11-15 05:57:20,179     INFO            dur: loaded /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/label_state_align/arctic_a0033.lab, 240 labels
+2016-11-15 05:57:20,183    DEBUG            dur: made duration matrix of 48 frames x 5 features
+2016-11-15 05:57:20,184     INFO            dur: loaded /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/label_state_align/arctic_a0034.lab, 220 labels
+2016-11-15 05:57:20,189    DEBUG            dur: made duration matrix of 44 frames x 5 features
+2016-11-15 05:57:20,189     INFO            dur: loaded /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/label_state_align/arctic_a0035.lab, 235 labels
+2016-11-15 05:57:20,194    DEBUG            dur: made duration matrix of 47 frames x 5 features
+2016-11-15 05:57:20,194     INFO            dur: loaded /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/label_state_align/arctic_a0036.lab,  95 labels
+2016-11-15 05:57:20,196    DEBUG            dur: made duration matrix of 19 frames x 5 features
+2016-11-15 05:57:20,196     INFO            dur: loaded /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/label_state_align/arctic_a0037.lab, 140 labels
+2016-11-15 05:57:20,199    DEBUG            dur: made duration matrix of 28 frames x 5 features
+2016-11-15 05:57:20,199     INFO            dur: loaded /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/label_state_align/arctic_a0038.lab, 105 labels
+2016-11-15 05:57:20,202    DEBUG            dur: made duration matrix of 21 frames x 5 features
+2016-11-15 05:57:20,202     INFO            dur: loaded /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/label_state_align/arctic_a0039.lab, 155 labels
+2016-11-15 05:57:20,205    DEBUG            dur: made duration matrix of 31 frames x 5 features
+2016-11-15 05:57:20,206     INFO            dur: loaded /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/label_state_align/arctic_a0040.lab, 155 labels
+2016-11-15 05:57:20,209    DEBUG            dur: made duration matrix of 31 frames x 5 features
+2016-11-15 05:57:20,209     INFO            dur: loaded /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/label_state_align/arctic_a0041.lab, 125 labels
+2016-11-15 05:57:20,212    DEBUG            dur: made duration matrix of 25 frames x 5 features
+2016-11-15 05:57:20,212     INFO            dur: loaded /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/label_state_align/arctic_a0042.lab, 170 labels
+2016-11-15 05:57:20,215    DEBUG            dur: made duration matrix of 34 frames x 5 features
+2016-11-15 05:57:20,216     INFO            dur: loaded /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/label_state_align/arctic_a0043.lab, 230 labels
+2016-11-15 05:57:20,221    DEBUG            dur: made duration matrix of 46 frames x 5 features
+2016-11-15 05:57:20,221     INFO            dur: loaded /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/label_state_align/arctic_a0044.lab, 195 labels
+2016-11-15 05:57:20,225    DEBUG            dur: made duration matrix of 39 frames x 5 features
+2016-11-15 05:57:20,225     INFO            dur: loaded /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/label_state_align/arctic_a0045.lab, 150 labels
+2016-11-15 05:57:20,228    DEBUG            dur: made duration matrix of 30 frames x 5 features
+2016-11-15 05:57:20,228     INFO            dur: loaded /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/label_state_align/arctic_a0046.lab, 175 labels
+2016-11-15 05:57:20,232    DEBUG            dur: made duration matrix of 35 frames x 5 features
+2016-11-15 05:57:20,232     INFO            dur: loaded /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/label_state_align/arctic_a0047.lab, 195 labels
+2016-11-15 05:57:20,236    DEBUG            dur: made duration matrix of 39 frames x 5 features
+2016-11-15 05:57:20,237     INFO            dur: loaded /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/label_state_align/arctic_a0048.lab, 150 labels
+2016-11-15 05:57:20,240    DEBUG            dur: made duration matrix of 30 frames x 5 features
+2016-11-15 05:57:20,240     INFO            dur: loaded /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/label_state_align/arctic_a0049.lab, 180 labels
+2016-11-15 05:57:20,244    DEBUG            dur: made duration matrix of 36 frames x 5 features
+2016-11-15 05:57:20,244     INFO            dur: loaded /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/label_state_align/arctic_a0050.lab, 240 labels
+2016-11-15 05:57:20,249    DEBUG            dur: made duration matrix of 48 frames x 5 features
+2016-11-15 05:57:20,249     INFO            dur: loaded /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/label_state_align/arctic_a0051.lab, 235 labels
+2016-11-15 05:57:20,255    DEBUG            dur: made duration matrix of 47 frames x 5 features
+2016-11-15 05:57:20,255     INFO            dur: loaded /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/label_state_align/arctic_a0052.lab, 125 labels
+2016-11-15 05:57:20,257    DEBUG            dur: made duration matrix of 25 frames x 5 features
+2016-11-15 05:57:20,258     INFO            dur: loaded /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/label_state_align/arctic_a0053.lab, 205 labels
+2016-11-15 05:57:20,262    DEBUG            dur: made duration matrix of 41 frames x 5 features
+2016-11-15 05:57:20,262     INFO            dur: loaded /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/label_state_align/arctic_a0054.lab, 100 labels
+2016-11-15 05:57:20,264    DEBUG            dur: made duration matrix of 20 frames x 5 features
+2016-11-15 05:57:20,264     INFO            dur: loaded /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/label_state_align/arctic_a0055.lab, 250 labels
+2016-11-15 05:57:20,270    DEBUG            dur: made duration matrix of 50 frames x 5 features
+2016-11-15 05:57:20,270     INFO            dur: loaded /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/label_state_align/arctic_a0056.lab, 165 labels
+2016-11-15 05:57:20,273    DEBUG            dur: made duration matrix of 33 frames x 5 features
+2016-11-15 05:57:20,274     INFO            dur: loaded /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/label_state_align/arctic_a0057.lab, 115 labels
+2016-11-15 05:57:20,276    DEBUG            dur: made duration matrix of 23 frames x 5 features
+2016-11-15 05:57:20,276     INFO            dur: loaded /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/label_state_align/arctic_a0058.lab, 235 labels
+2016-11-15 05:57:20,281    DEBUG            dur: made duration matrix of 47 frames x 5 features
+2016-11-15 05:57:20,281     INFO            dur: loaded /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/label_state_align/arctic_a0059.lab, 140 labels
+2016-11-15 05:57:20,284    DEBUG            dur: made duration matrix of 28 frames x 5 features
+2016-11-15 05:57:20,285     INFO            dur: loaded /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/label_state_align/arctic_a0060.lab, 110 labels
+2016-11-15 05:57:20,287    DEBUG            dur: made duration matrix of 22 frames x 5 features
+2016-11-15 05:57:20,288     INFO           main: creating acoustic (output) features
+2016-11-15 05:57:20,288     INFO  acoustic_comp: processing file    1 of   60 : /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/nn_dur_5/arctic_a0001.cmp
+2016-11-15 05:57:20,288    DEBUG  acoustic_comp:  wrote 37 frames of features
+2016-11-15 05:57:20,288     INFO  acoustic_comp: processing file    2 of   60 : /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/nn_dur_5/arctic_a0002.cmp
+2016-11-15 05:57:20,288    DEBUG  acoustic_comp:  wrote 42 frames of features
+2016-11-15 05:57:20,288     INFO  acoustic_comp: processing file    3 of   60 : /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/nn_dur_5/arctic_a0003.cmp
+2016-11-15 05:57:20,289    DEBUG  acoustic_comp:  wrote 41 frames of features
+2016-11-15 05:57:20,289     INFO  acoustic_comp: processing file    4 of   60 : /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/nn_dur_5/arctic_a0004.cmp
+2016-11-15 05:57:20,289    DEBUG  acoustic_comp:  wrote 28 frames of features
+2016-11-15 05:57:20,289     INFO  acoustic_comp: processing file    5 of   60 : /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/nn_dur_5/arctic_a0005.cmp
+2016-11-15 05:57:20,289    DEBUG  acoustic_comp:  wrote 17 frames of features
+2016-11-15 05:57:20,289     INFO  acoustic_comp: processing file    6 of   60 : /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/nn_dur_5/arctic_a0006.cmp
+2016-11-15 05:57:20,290    DEBUG  acoustic_comp:  wrote 33 frames of features
+2016-11-15 05:57:20,290     INFO  acoustic_comp: processing file    7 of   60 : /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/nn_dur_5/arctic_a0007.cmp
+2016-11-15 05:57:20,290    DEBUG  acoustic_comp:  wrote 40 frames of features
+2016-11-15 05:57:20,290     INFO  acoustic_comp: processing file    8 of   60 : /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/nn_dur_5/arctic_a0008.cmp
+2016-11-15 05:57:20,290    DEBUG  acoustic_comp:  wrote 24 frames of features
+2016-11-15 05:57:20,290     INFO  acoustic_comp: processing file    9 of   60 : /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/nn_dur_5/arctic_a0009.cmp
+2016-11-15 05:57:20,290    DEBUG  acoustic_comp:  wrote 40 frames of features
+2016-11-15 05:57:20,291     INFO  acoustic_comp: processing file   10 of   60 : /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/nn_dur_5/arctic_a0010.cmp
+2016-11-15 05:57:20,291    DEBUG  acoustic_comp:  wrote 41 frames of features
+2016-11-15 05:57:20,291     INFO  acoustic_comp: processing file   11 of   60 : /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/nn_dur_5/arctic_a0011.cmp
+2016-11-15 05:57:20,291    DEBUG  acoustic_comp:  wrote 34 frames of features
+2016-11-15 05:57:20,291     INFO  acoustic_comp: processing file   12 of   60 : /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/nn_dur_5/arctic_a0012.cmp
+2016-11-15 05:57:20,291    DEBUG  acoustic_comp:  wrote 36 frames of features
+2016-11-15 05:57:20,291     INFO  acoustic_comp: processing file   13 of   60 : /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/nn_dur_5/arctic_a0013.cmp
+2016-11-15 05:57:20,292    DEBUG  acoustic_comp:  wrote 52 frames of features
+2016-11-15 05:57:20,292     INFO  acoustic_comp: processing file   14 of   60 : /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/nn_dur_5/arctic_a0014.cmp
+2016-11-15 05:57:20,292    DEBUG  acoustic_comp:  wrote 36 frames of features
+2016-11-15 05:57:20,292     INFO  acoustic_comp: processing file   15 of   60 : /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/nn_dur_5/arctic_a0015.cmp
+2016-11-15 05:57:20,292    DEBUG  acoustic_comp:  wrote 19 frames of features
+2016-11-15 05:57:20,292     INFO  acoustic_comp: processing file   16 of   60 : /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/nn_dur_5/arctic_a0016.cmp
+2016-11-15 05:57:20,293    DEBUG  acoustic_comp:  wrote 41 frames of features
+2016-11-15 05:57:20,293     INFO  acoustic_comp: processing file   17 of   60 : /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/nn_dur_5/arctic_a0017.cmp
+2016-11-15 05:57:20,293    DEBUG  acoustic_comp:  wrote 55 frames of features
+2016-11-15 05:57:20,293     INFO  acoustic_comp: processing file   18 of   60 : /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/nn_dur_5/arctic_a0018.cmp
+2016-11-15 05:57:20,293    DEBUG  acoustic_comp:  wrote 15 frames of features
+2016-11-15 05:57:20,293     INFO  acoustic_comp: processing file   19 of   60 : /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/nn_dur_5/arctic_a0019.cmp
+2016-11-15 05:57:20,293    DEBUG  acoustic_comp:  wrote 44 frames of features
+2016-11-15 05:57:20,294     INFO  acoustic_comp: processing file   20 of   60 : /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/nn_dur_5/arctic_a0020.cmp
+2016-11-15 05:57:20,294    DEBUG  acoustic_comp:  wrote 39 frames of features
+2016-11-15 05:57:20,294     INFO  acoustic_comp: processing file   21 of   60 : /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/nn_dur_5/arctic_a0021.cmp
+2016-11-15 05:57:20,294    DEBUG  acoustic_comp:  wrote 32 frames of features
+2016-11-15 05:57:20,294     INFO  acoustic_comp: processing file   22 of   60 : /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/nn_dur_5/arctic_a0022.cmp
+2016-11-15 05:57:20,294    DEBUG  acoustic_comp:  wrote 54 frames of features
+2016-11-15 05:57:20,294     INFO  acoustic_comp: processing file   23 of   60 : /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/nn_dur_5/arctic_a0023.cmp
+2016-11-15 05:57:20,295    DEBUG  acoustic_comp:  wrote 72 frames of features
+2016-11-15 05:57:20,295     INFO  acoustic_comp: processing file   24 of   60 : /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/nn_dur_5/arctic_a0024.cmp
+2016-11-15 05:57:20,295    DEBUG  acoustic_comp:  wrote 49 frames of features
+2016-11-15 05:57:20,295     INFO  acoustic_comp: processing file   25 of   60 : /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/nn_dur_5/arctic_a0025.cmp
+2016-11-15 05:57:20,295    DEBUG  acoustic_comp:  wrote 38 frames of features
+2016-11-15 05:57:20,295     INFO  acoustic_comp: processing file   26 of   60 : /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/nn_dur_5/arctic_a0026.cmp
+2016-11-15 05:57:20,296    DEBUG  acoustic_comp:  wrote 37 frames of features
+2016-11-15 05:57:20,296     INFO  acoustic_comp: processing file   27 of   60 : /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/nn_dur_5/arctic_a0027.cmp
+2016-11-15 05:57:20,296    DEBUG  acoustic_comp:  wrote 48 frames of features
+2016-11-15 05:57:20,296     INFO  acoustic_comp: processing file   28 of   60 : /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/nn_dur_5/arctic_a0028.cmp
+2016-11-15 05:57:20,296    DEBUG  acoustic_comp:  wrote 17 frames of features
+2016-11-15 05:57:20,296     INFO  acoustic_comp: processing file   29 of   60 : /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/nn_dur_5/arctic_a0029.cmp
+2016-11-15 05:57:20,296    DEBUG  acoustic_comp:  wrote 40 frames of features
+2016-11-15 05:57:20,297     INFO  acoustic_comp: processing file   30 of   60 : /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/nn_dur_5/arctic_a0030.cmp
+2016-11-15 05:57:20,297    DEBUG  acoustic_comp:  wrote 14 frames of features
+2016-11-15 05:57:20,297     INFO  acoustic_comp: processing file   31 of   60 : /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/nn_dur_5/arctic_a0031.cmp
+2016-11-15 05:57:20,297    DEBUG  acoustic_comp:  wrote 26 frames of features
+2016-11-15 05:57:20,297     INFO  acoustic_comp: processing file   32 of   60 : /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/nn_dur_5/arctic_a0032.cmp
+2016-11-15 05:57:20,297    DEBUG  acoustic_comp:  wrote 48 frames of features
+2016-11-15 05:57:20,297     INFO  acoustic_comp: processing file   33 of   60 : /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/nn_dur_5/arctic_a0033.cmp
+2016-11-15 05:57:20,298    DEBUG  acoustic_comp:  wrote 48 frames of features
+2016-11-15 05:57:20,298     INFO  acoustic_comp: processing file   34 of   60 : /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/nn_dur_5/arctic_a0034.cmp
+2016-11-15 05:57:20,298    DEBUG  acoustic_comp:  wrote 44 frames of features
+2016-11-15 05:57:20,298     INFO  acoustic_comp: processing file   35 of   60 : /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/nn_dur_5/arctic_a0035.cmp
+2016-11-15 05:57:20,298    DEBUG  acoustic_comp:  wrote 47 frames of features
+2016-11-15 05:57:20,298     INFO  acoustic_comp: processing file   36 of   60 : /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/nn_dur_5/arctic_a0036.cmp
+2016-11-15 05:57:20,298    DEBUG  acoustic_comp:  wrote 19 frames of features
+2016-11-15 05:57:20,299     INFO  acoustic_comp: processing file   37 of   60 : /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/nn_dur_5/arctic_a0037.cmp
+2016-11-15 05:57:20,299    DEBUG  acoustic_comp:  wrote 28 frames of features
+2016-11-15 05:57:20,299     INFO  acoustic_comp: processing file   38 of   60 : /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/nn_dur_5/arctic_a0038.cmp
+2016-11-15 05:57:20,299    DEBUG  acoustic_comp:  wrote 21 frames of features
+2016-11-15 05:57:20,299     INFO  acoustic_comp: processing file   39 of   60 : /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/nn_dur_5/arctic_a0039.cmp
+2016-11-15 05:57:20,299    DEBUG  acoustic_comp:  wrote 31 frames of features
+2016-11-15 05:57:20,299     INFO  acoustic_comp: processing file   40 of   60 : /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/nn_dur_5/arctic_a0040.cmp
+2016-11-15 05:57:20,300    DEBUG  acoustic_comp:  wrote 31 frames of features
+2016-11-15 05:57:20,300     INFO  acoustic_comp: processing file   41 of   60 : /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/nn_dur_5/arctic_a0041.cmp
+2016-11-15 05:57:20,300    DEBUG  acoustic_comp:  wrote 25 frames of features
+2016-11-15 05:57:20,300     INFO  acoustic_comp: processing file   42 of   60 : /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/nn_dur_5/arctic_a0042.cmp
+2016-11-15 05:57:20,300    DEBUG  acoustic_comp:  wrote 34 frames of features
+2016-11-15 05:57:20,300     INFO  acoustic_comp: processing file   43 of   60 : /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/nn_dur_5/arctic_a0043.cmp
+2016-11-15 05:57:20,301    DEBUG  acoustic_comp:  wrote 46 frames of features
+2016-11-15 05:57:20,301     INFO  acoustic_comp: processing file   44 of   60 : /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/nn_dur_5/arctic_a0044.cmp
+2016-11-15 05:57:20,301    DEBUG  acoustic_comp:  wrote 39 frames of features
+2016-11-15 05:57:20,301     INFO  acoustic_comp: processing file   45 of   60 : /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/nn_dur_5/arctic_a0045.cmp
+2016-11-15 05:57:20,301    DEBUG  acoustic_comp:  wrote 30 frames of features
+2016-11-15 05:57:20,301     INFO  acoustic_comp: processing file   46 of   60 : /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/nn_dur_5/arctic_a0046.cmp
+2016-11-15 05:57:20,301    DEBUG  acoustic_comp:  wrote 35 frames of features
+2016-11-15 05:57:20,302     INFO  acoustic_comp: processing file   47 of   60 : /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/nn_dur_5/arctic_a0047.cmp
+2016-11-15 05:57:20,302    DEBUG  acoustic_comp:  wrote 39 frames of features
+2016-11-15 05:57:20,302     INFO  acoustic_comp: processing file   48 of   60 : /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/nn_dur_5/arctic_a0048.cmp
+2016-11-15 05:57:20,302    DEBUG  acoustic_comp:  wrote 30 frames of features
+2016-11-15 05:57:20,302     INFO  acoustic_comp: processing file   49 of   60 : /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/nn_dur_5/arctic_a0049.cmp
+2016-11-15 05:57:20,302    DEBUG  acoustic_comp:  wrote 36 frames of features
+2016-11-15 05:57:20,302     INFO  acoustic_comp: processing file   50 of   60 : /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/nn_dur_5/arctic_a0050.cmp
+2016-11-15 05:57:20,303    DEBUG  acoustic_comp:  wrote 48 frames of features
+2016-11-15 05:57:20,303     INFO  acoustic_comp: processing file   51 of   60 : /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/nn_dur_5/arctic_a0051.cmp
+2016-11-15 05:57:20,303    DEBUG  acoustic_comp:  wrote 47 frames of features
+2016-11-15 05:57:20,303     INFO  acoustic_comp: processing file   52 of   60 : /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/nn_dur_5/arctic_a0052.cmp
+2016-11-15 05:57:20,303    DEBUG  acoustic_comp:  wrote 25 frames of features
+2016-11-15 05:57:20,303     INFO  acoustic_comp: processing file   53 of   60 : /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/nn_dur_5/arctic_a0053.cmp
+2016-11-15 05:57:20,304    DEBUG  acoustic_comp:  wrote 41 frames of features
+2016-11-15 05:57:20,304     INFO  acoustic_comp: processing file   54 of   60 : /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/nn_dur_5/arctic_a0054.cmp
+2016-11-15 05:57:20,304    DEBUG  acoustic_comp:  wrote 20 frames of features
+2016-11-15 05:57:20,304     INFO  acoustic_comp: processing file   55 of   60 : /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/nn_dur_5/arctic_a0055.cmp
+2016-11-15 05:57:20,304    DEBUG  acoustic_comp:  wrote 50 frames of features
+2016-11-15 05:57:20,304     INFO  acoustic_comp: processing file   56 of   60 : /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/nn_dur_5/arctic_a0056.cmp
+2016-11-15 05:57:20,304    DEBUG  acoustic_comp:  wrote 33 frames of features
+2016-11-15 05:57:20,305     INFO  acoustic_comp: processing file   57 of   60 : /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/nn_dur_5/arctic_a0057.cmp
+2016-11-15 05:57:20,305    DEBUG  acoustic_comp:  wrote 23 frames of features
+2016-11-15 05:57:20,305     INFO  acoustic_comp: processing file   58 of   60 : /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/nn_dur_5/arctic_a0058.cmp
+2016-11-15 05:57:20,305    DEBUG  acoustic_comp:  wrote 47 frames of features
+2016-11-15 05:57:20,305     INFO  acoustic_comp: processing file   59 of   60 : /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/nn_dur_5/arctic_a0059.cmp
+2016-11-15 05:57:20,305    DEBUG  acoustic_comp:  wrote 28 frames of features
+2016-11-15 05:57:20,305     INFO  acoustic_comp: processing file   60 of   60 : /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/nn_dur_5/arctic_a0060.cmp
+2016-11-15 05:57:20,306    DEBUG  acoustic_comp:  wrote 22 frames of features
+2016-11-15 05:57:20,427     INFO           main: normalising acoustic (output) features using method MVN
+2016-11-15 05:57:20,441     INFO           main: saved MVN vectors to /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/norm_info_dur_5_MVN.dat
+2016-11-15 05:57:20,441     INFO           main: saved dur variance vector to /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/var/dur_5
+2016-11-15 05:57:20,465    DEBUG         labels: HTS-derived input feature dimension is 416 + 0 = 416
+2016-11-15 05:57:20,465     INFO           main: label dimension is 416
+2016-11-15 05:57:20,466     INFO           main: training DNN
+2016-11-15 05:57:20,466    DEBUG main.train_DNN: Starting train_DNN
+2016-11-15 05:57:20,466    DEBUG main.train_DNN: Creating training   data provider
+2016-11-15 05:57:20,466    DEBUG main.train_DNN: Creating validation data provider
+2016-11-15 05:57:20,503     INFO main.train_DNN: building the model
+2016-11-15 05:57:21,583     INFO main.train_DNN: fine-tuning the DNN model
+2016-11-15 05:57:26,929    DEBUG main.train_DNN: calculating validation loss
+2016-11-15 05:57:27,104     INFO main.train_DNN: epoch 1, validation error 4.644241, train error 4.870829  time spent 5.52
+2016-11-15 05:57:32,516    DEBUG main.train_DNN: calculating validation loss
+2016-11-15 05:57:32,694     INFO main.train_DNN: epoch 2, validation error 4.487165, train error 4.607444  time spent 5.59
+2016-11-15 05:57:38,046    DEBUG main.train_DNN: calculating validation loss
+2016-11-15 05:57:38,221     INFO main.train_DNN: epoch 3, validation error 4.392767, train error 4.459305  time spent 5.53
+2016-11-15 05:57:43,655    DEBUG main.train_DNN: calculating validation loss
+2016-11-15 05:57:43,839     INFO main.train_DNN: epoch 4, validation error 4.329392, train error 4.356348  time spent 5.62
+2016-11-15 05:57:49,210    DEBUG main.train_DNN: calculating validation loss
+2016-11-15 05:57:49,388     INFO main.train_DNN: epoch 5, validation error 4.284837, train error 4.277966  time spent 5.55
+2016-11-15 05:57:55,430    DEBUG main.train_DNN: calculating validation loss
+2016-11-15 05:57:55,605     INFO main.train_DNN: epoch 6, validation error 4.252743, train error 4.215003  time spent 5.68
+2016-11-15 05:58:02,699    DEBUG main.train_DNN: calculating validation loss
+2016-11-15 05:58:02,881     INFO main.train_DNN: epoch 7, validation error 4.229135, train error 4.162509  time spent 5.48
+2016-11-15 05:58:10,291    DEBUG main.train_DNN: calculating validation loss
+2016-11-15 05:58:10,474     INFO main.train_DNN: epoch 8, validation error 4.211323, train error 4.117513  time spent 5.50
+2016-11-15 05:58:17,668    DEBUG main.train_DNN: calculating validation loss
+2016-11-15 05:58:17,841     INFO main.train_DNN: epoch 9, validation error 4.197459, train error 4.078102  time spent 5.55
+2016-11-15 05:58:25,029    DEBUG main.train_DNN: calculating validation loss
+2016-11-15 05:58:25,205     INFO main.train_DNN: epoch 10, validation error 4.186284, train error 4.042981  time spent 5.53
+2016-11-15 05:58:32,892    DEBUG main.train_DNN: calculating validation loss
+2016-11-15 05:58:33,067     INFO main.train_DNN: epoch 11, validation error 4.189965, train error 4.044055  time spent 5.49
+2016-11-15 05:58:33,067    DEBUG main.train_DNN: validation loss increased
+2016-11-15 05:58:38,371    DEBUG main.train_DNN: calculating validation loss
+2016-11-15 05:58:38,548     INFO main.train_DNN: epoch 12, validation error 4.173001, train error 3.921315  time spent 5.48
+2016-11-15 05:58:46,593    DEBUG main.train_DNN: calculating validation loss
+2016-11-15 05:58:46,769     INFO main.train_DNN: epoch 13, validation error 4.179362, train error 3.873761  time spent 5.63
+2016-11-15 05:58:46,769    DEBUG main.train_DNN: validation loss increased
+2016-11-15 05:58:52,221    DEBUG main.train_DNN: calculating validation loss
+2016-11-15 05:58:52,395     INFO main.train_DNN: epoch 14, validation error 4.156760, train error 3.836890  time spent 5.63
+2016-11-15 05:58:59,753    DEBUG main.train_DNN: calculating validation loss
+2016-11-15 05:58:59,927     INFO main.train_DNN: epoch 15, validation error 4.144701, train error 3.816035  time spent 5.46
+2016-11-15 05:59:07,039    DEBUG main.train_DNN: calculating validation loss
+2016-11-15 05:59:07,212     INFO main.train_DNN: epoch 16, validation error 4.143400, train error 3.808428  time spent 5.43
+2016-11-15 05:59:14,392    DEBUG main.train_DNN: calculating validation loss
+2016-11-15 05:59:14,567     INFO main.train_DNN: epoch 17, validation error 4.143185, train error 3.804963  time spent 5.52
+2016-11-15 05:59:21,675    DEBUG main.train_DNN: calculating validation loss
+2016-11-15 05:59:21,850     INFO main.train_DNN: epoch 18, validation error 4.142815, train error 3.803295  time spent 5.47
+2016-11-15 05:59:28,957    DEBUG main.train_DNN: calculating validation loss
+2016-11-15 05:59:29,131     INFO main.train_DNN: epoch 19, validation error 4.142603, train error 3.802466  time spent 5.48
+2016-11-15 05:59:36,196    DEBUG main.train_DNN: calculating validation loss
+2016-11-15 05:59:36,369     INFO main.train_DNN: epoch 20, validation error 4.142498, train error 3.802053  time spent 5.43
+2016-11-15 05:59:43,452    DEBUG main.train_DNN: calculating validation loss
+2016-11-15 05:59:43,625     INFO main.train_DNN: epoch 21, validation error 4.142447, train error 3.801847  time spent 5.46
+2016-11-15 05:59:50,703    DEBUG main.train_DNN: calculating validation loss
+2016-11-15 05:59:50,877     INFO main.train_DNN: epoch 22, validation error 4.142421, train error 3.801744  time spent 5.46
+2016-11-15 05:59:58,454    DEBUG main.train_DNN: calculating validation loss
+2016-11-15 05:59:58,627     INFO main.train_DNN: epoch 23, validation error 4.142409, train error 3.801692  time spent 5.51
+2016-11-15 06:00:05,986    DEBUG main.train_DNN: calculating validation loss
+2016-11-15 06:00:06,162     INFO main.train_DNN: epoch 24, validation error 4.142403, train error 3.801667  time spent 5.51
+2016-11-15 06:00:13,302    DEBUG main.train_DNN: calculating validation loss
+2016-11-15 06:00:13,476     INFO main.train_DNN: epoch 25, validation error 4.142400, train error 3.801656  time spent 5.48
+2016-11-15 06:00:15,292     INFO main.train_DNN: overall  training time: 2.90m validation error 4.142400
+2016-11-15 06:00:15,294     INFO           main: generating from DNN
+2016-11-15 06:00:15,294    DEBUG dnn_generation: Starting dnn_generation
+2016-11-15 06:00:16,200     INFO dnn_generation: generating    1 of   10: /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/nn_no_silence_lab_norm_416/arctic_a0051.lab
+2016-11-15 06:00:16,389    DEBUG dnn_generation: saved to /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/gen/DNN_TANH_TANH_TANH_TANH_LINEAR__dur_1_50_416_5_4_512_512/arctic_a0051.cmp
+2016-11-15 06:00:16,389     INFO dnn_generation: generating    2 of   10: /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/nn_no_silence_lab_norm_416/arctic_a0052.lab
+2016-11-15 06:00:16,484    DEBUG dnn_generation: saved to /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/gen/DNN_TANH_TANH_TANH_TANH_LINEAR__dur_1_50_416_5_4_512_512/arctic_a0052.cmp
+2016-11-15 06:00:16,484     INFO dnn_generation: generating    3 of   10: /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/nn_no_silence_lab_norm_416/arctic_a0053.lab
+2016-11-15 06:00:16,585    DEBUG dnn_generation: saved to /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/gen/DNN_TANH_TANH_TANH_TANH_LINEAR__dur_1_50_416_5_4_512_512/arctic_a0053.cmp
+2016-11-15 06:00:16,585     INFO dnn_generation: generating    4 of   10: /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/nn_no_silence_lab_norm_416/arctic_a0054.lab
+2016-11-15 06:00:16,704    DEBUG dnn_generation: saved to /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/gen/DNN_TANH_TANH_TANH_TANH_LINEAR__dur_1_50_416_5_4_512_512/arctic_a0054.cmp
+2016-11-15 06:00:16,704     INFO dnn_generation: generating    5 of   10: /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/nn_no_silence_lab_norm_416/arctic_a0055.lab
+2016-11-15 06:00:16,821    DEBUG dnn_generation: saved to /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/gen/DNN_TANH_TANH_TANH_TANH_LINEAR__dur_1_50_416_5_4_512_512/arctic_a0055.cmp
+2016-11-15 06:00:16,821     INFO dnn_generation: generating    6 of   10: /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/nn_no_silence_lab_norm_416/arctic_a0056.lab
+2016-11-15 06:00:16,922    DEBUG dnn_generation: saved to /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/gen/DNN_TANH_TANH_TANH_TANH_LINEAR__dur_1_50_416_5_4_512_512/arctic_a0056.cmp
+2016-11-15 06:00:16,922     INFO dnn_generation: generating    7 of   10: /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/nn_no_silence_lab_norm_416/arctic_a0057.lab
+2016-11-15 06:00:17,007    DEBUG dnn_generation: saved to /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/gen/DNN_TANH_TANH_TANH_TANH_LINEAR__dur_1_50_416_5_4_512_512/arctic_a0057.cmp
+2016-11-15 06:00:17,007     INFO dnn_generation: generating    8 of   10: /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/nn_no_silence_lab_norm_416/arctic_a0058.lab
+2016-11-15 06:00:17,118    DEBUG dnn_generation: saved to /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/gen/DNN_TANH_TANH_TANH_TANH_LINEAR__dur_1_50_416_5_4_512_512/arctic_a0058.cmp
+2016-11-15 06:00:17,119     INFO dnn_generation: generating    9 of   10: /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/nn_no_silence_lab_norm_416/arctic_a0059.lab
+2016-11-15 06:00:17,209    DEBUG dnn_generation: saved to /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/gen/DNN_TANH_TANH_TANH_TANH_LINEAR__dur_1_50_416_5_4_512_512/arctic_a0059.cmp
+2016-11-15 06:00:17,209     INFO dnn_generation: generating   10 of   10: /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/nn_no_silence_lab_norm_416/arctic_a0060.lab
+2016-11-15 06:00:17,295    DEBUG dnn_generation: saved to /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/gen/DNN_TANH_TANH_TANH_TANH_LINEAR__dur_1_50_416_5_4_512_512/arctic_a0060.cmp
+2016-11-15 06:00:17,295    DEBUG           main: denormalising generated output using method MVN
+2016-11-15 06:00:17,296    DEBUGparam_generation: duration_decomposition for 10 files
+2016-11-15 06:00:17,297     INFOparam_generation: processing    1 of   10: /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/gen/DNN_TANH_TANH_TANH_TANH_LINEAR__dur_1_50_416_5_4_512_512/arctic_a0051.cmp
+2016-11-15 06:00:17,297    DEBUGparam_generation: wrote to file /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/gen/DNN_TANH_TANH_TANH_TANH_LINEAR__dur_1_50_416_5_4_512_512/arctic_a0051.dur
+2016-11-15 06:00:17,297     INFOparam_generation: processing    2 of   10: /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/gen/DNN_TANH_TANH_TANH_TANH_LINEAR__dur_1_50_416_5_4_512_512/arctic_a0052.cmp
+2016-11-15 06:00:17,297    DEBUGparam_generation: wrote to file /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/gen/DNN_TANH_TANH_TANH_TANH_LINEAR__dur_1_50_416_5_4_512_512/arctic_a0052.dur
+2016-11-15 06:00:17,297     INFOparam_generation: processing    3 of   10: /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/gen/DNN_TANH_TANH_TANH_TANH_LINEAR__dur_1_50_416_5_4_512_512/arctic_a0053.cmp
+2016-11-15 06:00:17,297    DEBUGparam_generation: wrote to file /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/gen/DNN_TANH_TANH_TANH_TANH_LINEAR__dur_1_50_416_5_4_512_512/arctic_a0053.dur
+2016-11-15 06:00:17,298     INFOparam_generation: processing    4 of   10: /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/gen/DNN_TANH_TANH_TANH_TANH_LINEAR__dur_1_50_416_5_4_512_512/arctic_a0054.cmp
+2016-11-15 06:00:17,298    DEBUGparam_generation: wrote to file /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/gen/DNN_TANH_TANH_TANH_TANH_LINEAR__dur_1_50_416_5_4_512_512/arctic_a0054.dur
+2016-11-15 06:00:17,298     INFOparam_generation: processing    5 of   10: /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/gen/DNN_TANH_TANH_TANH_TANH_LINEAR__dur_1_50_416_5_4_512_512/arctic_a0055.cmp
+2016-11-15 06:00:17,298    DEBUGparam_generation: wrote to file /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/gen/DNN_TANH_TANH_TANH_TANH_LINEAR__dur_1_50_416_5_4_512_512/arctic_a0055.dur
+2016-11-15 06:00:17,298     INFOparam_generation: processing    6 of   10: /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/gen/DNN_TANH_TANH_TANH_TANH_LINEAR__dur_1_50_416_5_4_512_512/arctic_a0056.cmp
+2016-11-15 06:00:17,298    DEBUGparam_generation: wrote to file /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/gen/DNN_TANH_TANH_TANH_TANH_LINEAR__dur_1_50_416_5_4_512_512/arctic_a0056.dur
+2016-11-15 06:00:17,299     INFOparam_generation: processing    7 of   10: /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/gen/DNN_TANH_TANH_TANH_TANH_LINEAR__dur_1_50_416_5_4_512_512/arctic_a0057.cmp
+2016-11-15 06:00:17,299    DEBUGparam_generation: wrote to file /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/gen/DNN_TANH_TANH_TANH_TANH_LINEAR__dur_1_50_416_5_4_512_512/arctic_a0057.dur
+2016-11-15 06:00:17,299     INFOparam_generation: processing    8 of   10: /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/gen/DNN_TANH_TANH_TANH_TANH_LINEAR__dur_1_50_416_5_4_512_512/arctic_a0058.cmp
+2016-11-15 06:00:17,299    DEBUGparam_generation: wrote to file /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/gen/DNN_TANH_TANH_TANH_TANH_LINEAR__dur_1_50_416_5_4_512_512/arctic_a0058.dur
+2016-11-15 06:00:17,299     INFOparam_generation: processing    9 of   10: /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/gen/DNN_TANH_TANH_TANH_TANH_LINEAR__dur_1_50_416_5_4_512_512/arctic_a0059.cmp
+2016-11-15 06:00:17,299    DEBUGparam_generation: wrote to file /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/gen/DNN_TANH_TANH_TANH_TANH_LINEAR__dur_1_50_416_5_4_512_512/arctic_a0059.dur
+2016-11-15 06:00:17,300     INFOparam_generation: processing   10 of   10: /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/gen/DNN_TANH_TANH_TANH_TANH_LINEAR__dur_1_50_416_5_4_512_512/arctic_a0060.cmp
+2016-11-15 06:00:17,300    DEBUGparam_generation: wrote to file /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/gen/DNN_TANH_TANH_TANH_TANH_LINEAR__dur_1_50_416_5_4_512_512/arctic_a0060.dur
+2016-11-15 06:00:17,300     INFO            dur: loaded /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/label_state_align/arctic_a0051.lab, 235 labels
+2016-11-15 06:00:17,303    DEBUG            dur: modifed label with predicted duration of 45 frames x 5 features
+2016-11-15 06:00:17,304     INFO            dur: loaded /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/label_state_align/arctic_a0052.lab, 125 labels
+2016-11-15 06:00:17,305    DEBUG            dur: modifed label with predicted duration of 23 frames x 5 features
+2016-11-15 06:00:17,306     INFO            dur: loaded /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/label_state_align/arctic_a0053.lab, 205 labels
+2016-11-15 06:00:17,309    DEBUG            dur: modifed label with predicted duration of 39 frames x 5 features
+2016-11-15 06:00:17,309     INFO            dur: loaded /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/label_state_align/arctic_a0054.lab, 100 labels
+2016-11-15 06:00:17,310    DEBUG            dur: modifed label with predicted duration of 18 frames x 5 features
+2016-11-15 06:00:17,310     INFO            dur: loaded /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/label_state_align/arctic_a0055.lab, 250 labels
+2016-11-15 06:00:17,316    DEBUG            dur: modifed label with predicted duration of 48 frames x 5 features
+2016-11-15 06:00:17,316     INFO            dur: loaded /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/label_state_align/arctic_a0056.lab, 165 labels
+2016-11-15 06:00:17,320    DEBUG            dur: modifed label with predicted duration of 31 frames x 5 features
+2016-11-15 06:00:17,321     INFO            dur: loaded /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/label_state_align/arctic_a0057.lab, 115 labels
+2016-11-15 06:00:17,322    DEBUG            dur: modifed label with predicted duration of 21 frames x 5 features
+2016-11-15 06:00:17,323     INFO            dur: loaded /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/label_state_align/arctic_a0058.lab, 235 labels
+2016-11-15 06:00:17,326    DEBUG            dur: modifed label with predicted duration of 45 frames x 5 features
+2016-11-15 06:00:17,327     INFO            dur: loaded /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/label_state_align/arctic_a0059.lab, 140 labels
+2016-11-15 06:00:17,329    DEBUG            dur: modifed label with predicted duration of 26 frames x 5 features
+2016-11-15 06:00:17,329     INFO            dur: loaded /home/ashish/Text2Speech/TTSDNNRepo/egs/slt_arctic/s1/experiments/slt_arctic_demo/duration_model/data/label_state_align/arctic_a0060.lab, 110 labels
+2016-11-15 06:00:17,331    DEBUG            dur: modifed label with predicted duration of 20 frames x 5 features
+2016-11-15 06:00:17,331     INFO           main: calculating MCD
+2016-11-15 06:00:17,371     INFO           main: Develop: DNN -- RMSE: 6.826 frames/phoneme; CORR: 0.624; 
+2016-11-15 06:00:17,372     INFO           main: Test: DNN -- RMSE: 7.840 frames/phoneme; CORR: 0.562; 

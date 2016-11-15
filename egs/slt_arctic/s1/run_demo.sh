@@ -28,7 +28,6 @@ fi
 echo "Step 2: training duration model..."
 ./scripts/submit.sh ${MerlinDir}/src/run_merlin.py conf/duration_${Voice}.conf
 
-exit 1
 ### Step 3: train acoustic model ###
 echo "Step 3: training acoustic model..."
 ./scripts/submit.sh ${MerlinDir}/src/run_merlin.py conf/acoustic_${Voice}.conf
