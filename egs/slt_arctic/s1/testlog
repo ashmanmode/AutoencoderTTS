@@ -1,0 +1,22 @@
+Step 1: setting up experiments directory and the training data files...
+Step 6: Generating Waveforms from samples ....
+Writing .swav for  experiments/slt_arctic_demo/test_synthesis/wav/arctic_a0001.samp
+Writing .swav for  experiments/slt_arctic_demo/test_synthesis/wav/arctic_a0002.samp
+Writing .swav for  experiments/slt_arctic_demo/test_synthesis/wav/arctic_a0003.samp
+Writing .swav for  experiments/slt_arctic_demo/test_synthesis/wav/arctic_a0004.samp
+Writing .swav for  experiments/slt_arctic_demo/test_synthesis/wav/arctic_a0005.samp
+Writing .swav for  experiments/slt_arctic_demo/test_synthesis/wav/arctic_a0056.samp
+Writing .swav for  experiments/slt_arctic_demo/test_synthesis/wav/arctic_a0057.samp
+Writing .swav for  experiments/slt_arctic_demo/test_synthesis/wav/arctic_a0058.samp
+Writing .swav for  experiments/slt_arctic_demo/test_synthesis/wav/arctic_a0059.samp
+Writing .swav for  experiments/slt_arctic_demo/test_synthesis/wav/arctic_a0060.samp
+Writing .cwav for  experiments/slt_arctic_demo/test_synthesis/wav/arctic_a0001.cwav
+Writing .cwav for  experiments/slt_arctic_demo/test_synthesis/wav/arctic_a0002.cwav
+Writing .cwav for  experiments/slt_arctic_demo/test_synthesis/wav/arctic_a0003.cwav
+Writing .cwav for  experiments/slt_arctic_demo/test_synthesis/wav/arctic_a0004.cwav
+Writing .cwav for  experiments/slt_arctic_demo/test_synthesis/wav/arctic_a0005.cwav
+Writing .cwav for  experiments/slt_arctic_demo/test_synthesis/wav/arctic_a0056.cwav
+Writing .cwav for  experiments/slt_arctic_demo/test_synthesis/wav/arctic_a0057.cwav
+Writing .cwav for  experiments/slt_arctic_demo/test_synthesis/wav/arctic_a0058.cwav
+Writing .cwav for  experiments/slt_arctic_demo/test_synthesis/wav/arctic_a0059.cwav
+Writing .cwav for  experiments/slt_arctic_demo/test_synthesis/wav/arctic_a0060.cwav

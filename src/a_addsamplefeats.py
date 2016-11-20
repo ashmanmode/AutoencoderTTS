@@ -103,29 +103,29 @@ def visualize_dnn(dnn):
 
     plotlogger = logging.getLogger("plotting")
 
-	# reference activation weights in layers
+    # reference activation weights in layers
     W = list(); layer_name = list()
     for i in xrange(len(dnn.params)):
         aa = dnn.params[i].get_value(borrow=True).T
         print   aa.shape, aa.size
         if aa.size > aa.shape[0]:
-        	W.append(aa)
-        	layer_name.append(dnn.params[i].name)
-        	
+            W.append(aa)
+            layer_name.append(dnn.params[i].name)
+            
     ## plot activation weights including input and output
-    layer_num = len(W)		
+    layer_num = len(W)      
     for i_layer in xrange(layer_num):
-		fig_name = 'Activation weights W' + str(i_layer) + '_' + layer_name[i_layer]
-		fig_title = 'Activation weights of W' + str(i_layer)
-		xlabel = 'Neuron index of hidden layer ' + str(i_layer)
-		ylabel = 'Neuron index of hidden layer ' + str(i_layer+1)
-		if i_layer == 0:
-			xlabel = 'Input feature index'
-		if i_layer == layer_num-1:
-			ylabel = 'Output feature index'
-		logger.create_plot(fig_name, SingleWeightMatrixPlot)
-		plotlogger.add_plot_point(fig_name, fig_name, W[i_layer])
-		plotlogger.save_plot(fig_name, title=fig_name, xlabel=xlabel, ylabel=ylabel)
+        fig_name = 'Activation weights W' + str(i_layer) + '_' + layer_name[i_layer]
+        fig_title = 'Activation weights of W' + str(i_layer)
+        xlabel = 'Neuron index of hidden layer ' + str(i_layer)
+        ylabel = 'Neuron index of hidden layer ' + str(i_layer+1)
+        if i_layer == 0:
+            xlabel = 'Input feature index'
+        if i_layer == layer_num-1:
+            ylabel = 'Output feature index'
+        logger.create_plot(fig_name, SingleWeightMatrixPlot)
+        plotlogger.add_plot_point(fig_name, fig_name, W[i_layer])
+        plotlogger.save_plot(fig_name, title=fig_name, xlabel=xlabel, ylabel=ylabel)
 
 
 def load_covariance(var_file_dict, out_dimension_dict): 
@@ -345,6 +345,7 @@ def train_DNN(train_xy_file_list, valid_xy_file_list, \
 
     end_time = time.time()
     print "Will save model here"
+    visualize_dnn(dnn_model)
 #    cPickle.dump(best_dnn_model, open(nnets_file_name, 'wb'))
             
     logger.info('overall  training time: %.2fm validation error %f' % ((end_time - start_time) / 60., best_validation_loss))
@@ -486,6 +487,8 @@ def main_function(cfg):
     in_file_list_dict = {}
 
     for feature_name in cfg.in_dir_dict.keys():
+        print  cfg.in_dir_dict[feature_name]
+        print  cfg.file_extension_dict[feature_name]
         in_file_list_dict[feature_name] = prepare_file_path_list(file_id_list, cfg.in_dir_dict[feature_name], cfg.file_extension_dict[feature_name], False)
 
     nn_cmp_file_list         = prepare_file_path_list(file_id_list, nn_cmp_dir, cfg.cmp_ext)
@@ -493,7 +496,7 @@ def main_function(cfg):
 
     ###normalisation information
     norm_info_file = os.path.join(data_dir, 'norm_info' + cfg.combined_feature_name + '_' + str(cfg.cmp_dim) + '_' + cfg.output_feature_normalisation + '.dat')
-	
+    
     ### normalise input full context label
     ##Ashish Normalizastion is done here
     # currently supporting two different forms of lingustic features
@@ -589,7 +592,7 @@ def main_function(cfg):
     if cfg.NORMLAB and (cfg.label_style == 'composed'):
         # new flexible label preprocessor
         
-    	logger.info('preparing label data (input) using "composed" style labels')
+        logger.info('preparing label data (input) using "composed" style labels')
         label_composer = LabelComposer()
         label_composer.load_label_configuration(cfg.label_config_file)
     
@@ -681,7 +684,7 @@ def main_function(cfg):
     ##Ashish Now making OUTPUT Features
     ### make output duration data
     if cfg.MAKEDUR:
-    	logger.info('creating duration (output) features')
+        logger.info('creating duration (output) features')
         label_type = cfg.label_type
         feature_type = cfg.dur_feature_type
         label_normaliser.prepare_dur_data(in_label_align_file_list, dur_file_list, label_type, feature_type)
@@ -690,7 +693,7 @@ def main_function(cfg):
 
     ### make output acoustic data
     if cfg.MAKECMP:
-    	logger.info('creating acoustic (output) features')
+        logger.info('creating acoustic (output) features')
         delta_win = cfg.delta_win #[-0.5, 0.0, 0.5]
         acc_win = cfg.acc_win     #[1.0, -2.0, 1.0]
         
@@ -699,10 +702,10 @@ def main_function(cfg):
             acoustic_worker.make_equal_frames(dur_file_list, lf0_file_list, cfg.in_dimension_dict)
         
         #Ashish Now getting all output features from frontend 
-        # At this point we already have mgc,bap and lf0 stoted into files
+        # # At this point we already have mgc,bap and lf0 stoted into files
         # print in_file_list_dict
         # print nn_cmp_file_list
-        # print cfg.in_dimension_dict
+        # print cfg.in_dimension_dicty
         # print cfg.out_dimension_dict
         acoustic_worker.prepare_nn_data(in_file_list_dict, nn_cmp_file_list, cfg.in_dimension_dict, cfg.out_dimension_dict)
 
@@ -737,7 +740,7 @@ def main_function(cfg):
     ## Normalization uses this dim   
     ### normalise output acoustic data
     if cfg.NORMCMP:
-    	logger.info('normalising acoustic (output) features using method %s' % cfg.output_feature_normalisation)
+        logger.info('normalising acoustic (output) features using method %s' % cfg.output_feature_normalisation)
         cmp_norm_info = None
         if cfg.output_feature_normalisation == 'MVN':
             normaliser = MeanVarianceNorm(feature_dimension=cfg.cmp_dim)
@@ -825,7 +828,7 @@ def main_function(cfg):
 
         var_dict = load_covariance(var_file_dict, cfg.out_dimension_dict)
 
-    	logger.info('training DNN')
+        logger.info('training DNN')
 
         fid = open(norm_info_file, 'rb')
         cmp_min_max = numpy.fromfile(fid, dtype=numpy.float32)
@@ -886,7 +889,7 @@ def main_function(cfg):
             if hidden_layers_sizes(i) == bottleneck_size:
                 bottleneck_index = i
 
-    	logger.info('generating bottleneck features from DNN')
+        logger.info('generating bottleneck features from DNN')
 
         try:
             os.makedirs(gen_dir)
@@ -923,7 +926,7 @@ def main_function(cfg):
         gen_dir = cfg.test_synth_dir
 
     if cfg.DNNGEN:
-    	logger.info('generating from DNN')
+        logger.info('generating from DNN')
 
         try:
             os.makedirs(gen_dir)
@@ -939,7 +942,7 @@ def main_function(cfg):
         gen_file_list = prepare_file_path_list(gen_file_id_list, gen_dir, cfg.cmp_ext)
         dnn_generation(test_x_file_list, nnets_file_name, lab_dim, cfg.cmp_dim, gen_file_list)
 
-    	logger.debug('denormalising generated output using method %s' % cfg.output_feature_normalisation)
+        logger.debug('denormalising generated output using method %s' % cfg.output_feature_normalisation)
 
         fid = open(norm_info_file, 'rb')
         cmp_min_max = numpy.fromfile(fid, dtype=numpy.float32)
@@ -960,6 +963,9 @@ def main_function(cfg):
             raise
 
         if cfg.AcousticModel:
+            print "Acoustic Ashish"
+            print cfg.out_dimension_dict
+            print cfg.cmp_dim
             ##perform MLPG to smooth parameter trajectory
             ## lf0 is included, the output features much have vuv. 
             generator = ParameterGeneration(gen_wav_features = cfg.gen_wav_features, enforce_silence = cfg.enforce_silence)
@@ -980,10 +986,10 @@ def main_function(cfg):
 
     ### generate wav
     if cfg.GENWAV:
-    	logger.info('reconstructing waveform(s)')
-    	generate_wav(gen_dir, gen_file_id_list, cfg)     # generated speech
-#    	generate_wav(nn_cmp_dir, gen_file_id_list, cfg)  # reference copy synthesis speech
-    	
+        logger.info('reconstructing waveform(s)')
+        generate_wav(gen_dir, gen_file_id_list, cfg)     # generated speech
+#       generate_wav(nn_cmp_dir, gen_file_id_list, cfg)  # reference copy synthesis speech
+        
     ### setting back to original conditions before calculating objective scores ###
     if cfg.GenTestList:
         in_label_align_file_list = prepare_file_path_list(file_id_list, cfg.in_label_align_dir, cfg.lab_ext, False)
@@ -992,7 +998,7 @@ def main_function(cfg):
 
     ### evaluation: RMSE and CORR for duration       
     if cfg.CALMCD and cfg.DurationModel:
-    	logger.info('calculating MCD')
+        logger.info('calculating MCD')
 
         ref_data_dir = os.path.join(data_dir, 'ref_data')
 
@@ -1022,7 +1028,7 @@ def main_function(cfg):
 
     ### evaluation: calculate distortion        
     if cfg.CALMCD and cfg.AcousticModel:
-    	logger.info('calculating MCD')
+        logger.info('calculating MCD')
 
         ref_data_dir = os.path.join(data_dir, 'ref_data')
 
@@ -1152,20 +1158,20 @@ if __name__ == '__main__':
     logger.info('    device: '+theano.config.device)
 
     # Check for the presence of git
-    ret = os.system('git status > /dev/null')
-    if ret==0:
-        logger.info('  Git is available in the working directory:')
-        git_describe = subprocess.Popen(['git', 'describe', '--tags', '--always'], stdout=subprocess.PIPE).communicate()[0][:-1]
-        logger.info('    Merlin version: '+git_describe)
-        git_branch = subprocess.Popen(['git', 'rev-parse', '--abbrev-ref', 'HEAD'], stdout=subprocess.PIPE).communicate()[0][:-1]
-        logger.info('    branch: '+git_branch)
-        git_diff = subprocess.Popen(['git', 'diff', '--name-status'], stdout=subprocess.PIPE).communicate()[0]
-        git_diff = git_diff.replace('\t',' ').split('\n')
-        logger.info('    diff to Merlin version:')
-        for filediff in git_diff:
-            if len(filediff)>0: logger.info('      '+filediff)
-        logger.info('      (all diffs logged in '+os.path.basename(cfg.log_file)+'.gitdiff'+')')
-        os.system('git diff > '+cfg.log_file+'.gitdiff')
+    # ret = os.system('git status > /dev/null')
+    # if ret==0:
+    #     logger.info('  Git is available in the working directory:')
+    #     git_describe = subprocess.Popen(['git', 'describe', '--tags', '--always'], stdout=subprocess.PIPE).communicate()[0][:-1]
+    #     logger.info('    Merlin version: '+git_describe)
+    #     git_branch = subprocess.Popen(['git', 'rev-parse', '--abbrev-ref', 'HEAD'], stdout=subprocess.PIPE).communicate()[0][:-1]
+    #     logger.info('    branch: '+git_branch)
+    #     git_diff = subprocess.Popen(['git', 'diff', '--name-status'], stdout=subprocess.PIPE).communicate()[0]
+    #     git_diff = git_diff.replace('\t',' ').split('\n')
+    #     logger.info('    diff to Merlin version:')
+    #     for filediff in git_diff:
+    #         if len(filediff)>0: logger.info('      '+filediff)
+    #     logger.info('      (all diffs logged in '+os.path.basename(cfg.log_file)+'.gitdiff'+')')
+    #     os.system('git diff > '+cfg.log_file+'.gitdiff')
 
     logger.info('Execution information:')
     logger.info('  HOSTNAME: '+socket.getfqdn())

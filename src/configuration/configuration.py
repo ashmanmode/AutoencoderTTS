@@ -160,7 +160,7 @@ class configuration(object):
             ('data_dir', '', 'Paths','data'),
             ('plot_dir', '', 'Paths','plot'),
 
-            ('plot',      False, 'Utility', 'plot'),
+            ('plot',      True, 'Utility', 'plot'),
             ('profile',   False, 'Utility', 'profile'),
 
             ('file_id_scp'       , os.path.join(self.work_dir, 'data/file_id_list.scp')    , 'Paths', 'file_id_list'),
@@ -170,6 +170,8 @@ class configuration(object):
 
             ('in_stepw_dir' , os.path.join(self.work_dir, 'data/stepw'), 'Paths', 'in_stepw_dir'),
             ('in_mgc_dir'   , os.path.join(self.work_dir, 'data/mgc')  , 'Paths', 'in_mgc_dir'),
+            ('in_fft_dir'   , os.path.join(self.work_dir, 'data/fft')  , 'Paths', 'in_fft_dir'),
+            ('in_samp_dir'   , os.path.join(self.work_dir, 'data/samp')  , 'Paths', 'in_samp_dir'),
             ('in_lf0_dir'   , os.path.join(self.work_dir, 'data/lf0')  , 'Paths', 'in_lf0_dir'),
             ('in_bap_dir'   , os.path.join(self.work_dir, 'data/bap')  , 'Paths', 'in_bap_dir'),
             ('in_sp_dir'    , os.path.join(self.work_dir, 'data/sp' )  , 'Paths', 'in_sp_dir'),
@@ -273,6 +275,8 @@ class configuration(object):
 
 
             ('mgc_dim' ,60     ,'Outputs','mgc'),
+            ('fft_dim' ,512    ,'Outputs','fft'),
+            ('samp_dim' ,180     ,'Outputs','samp'),
             ('dmgc_dim',60 * 3 ,'Outputs','dmgc'),
             ('vuv_dim' ,1      ,'Outputs','vuv'),
             ('lf0_dim' ,1      ,'Outputs','lf0'),
@@ -394,7 +398,9 @@ class configuration(object):
             ('utt_ext'   , '.utt'     , 'Extensions', 'utt_ext'),
             ('stepw_ext' , '.stepw'   , 'Extensions', 'stepw_ext'),
             ('sp_ext'    , '.sp'      , 'Extensions', 'sp_ext'),
-
+            ##Ashish
+            ('fft_ext'    , '.fft'      , 'Extensions', 'fft_ext'),
+            ('samp_ext'    , '.samp'      , 'Extensions', 'samp_ext'),
 
             ## GlottHMM
             ('F0_ext'   , '.F0'     , 'Extensions', 'F0_ext'),
@@ -465,7 +471,7 @@ class configuration(object):
     def complete_configuration(self):
         # to be called after reading any user-specific settings
         # because the values set here depend on those user-specific settings
-
+        print "Configurations ?? Ashish"
         # get a logger
         logger = logging.getLogger("configuration")
 
@@ -534,6 +540,17 @@ class configuration(object):
                 in_dimension  = self.mgc_dim
                 out_dimension = self.dmgc_dim
                 in_directory  = self.in_mgc_dir
+
+            elif feature_name == 'fft':
+                in_dimension  = self.fft_dim
+                out_dimension = self.fft_dim
+                in_directory  = self.in_fft_dir
+
+
+            elif feature_name == 'samp':
+                in_dimension  = self.samp_dim
+                out_dimension = self.samp_dim
+                in_directory  = self.in_samp_dir
 
 #                current_stream_hidden_size = self.stream_mgc_hidden_size
 #                current_stream_weight      = self.stream_weight_mgc
@@ -702,6 +719,8 @@ class configuration(object):
         # to check whether all the input and output features' file extensions are here
         self.file_extension_dict = {}
         self.file_extension_dict['mgc'] = self.mgc_ext
+        self.file_extension_dict['samp'] = self.samp_ext
+        self.file_extension_dict['fft'] = self.fft_ext
         self.file_extension_dict['lf0'] = self.lf0_ext
         self.file_extension_dict['bap'] = self.bap_ext
         self.file_extension_dict['stepw'] = self.stepw_ext

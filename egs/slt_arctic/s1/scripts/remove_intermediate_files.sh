@@ -32,7 +32,7 @@ fi
 if [ -d "$gen_wav_dir" ]; then
     cd ${gen_wav_dir}
     rm -f weight
-    rm -f *.!(wav)
+    rm -f !(*.wav|*.samp|*.fft)
 fi
 
 cd ${current_working_dir}

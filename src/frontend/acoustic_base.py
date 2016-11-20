@@ -74,7 +74,7 @@ class   AcousticBase(object):
         self.file_number = len(out_file_list)
         # print "Inside prepare_nn_data"
         for data_stream_name in in_file_list_dict.keys():
-            # print data_stream_name
+            print data_stream_name
             try:
                 assert len(in_file_list_dict[data_stream_name]) == self.file_number
             except AssertionError:
@@ -95,6 +95,7 @@ class   AcousticBase(object):
                 raise
 
             ## we assume static+delta+delta-delta
+            ## Only for calculating delta and double deltas
             if out_dimension_dict[data_stream_name] == 3 * in_dimension_dict[data_stream_name]:
                 self.compute_dynamic[data_stream_name] = True
             elif out_dimension_dict[data_stream_name] == in_dimension_dict[data_stream_name]:

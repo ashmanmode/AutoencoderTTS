@@ -92,6 +92,7 @@ class   AcousticComposition(AcousticBase):
                 
     def prepare_data(self, in_file_list_dict, out_file_list, in_dimension_dict, out_dimension_dict):
 
+        print "Inside prepare data"
         logger = logging.getLogger("acoustic_comp")
 
         stream_start_index = {}
@@ -118,12 +119,20 @@ class   AcousticComposition(AcousticBase):
 
 
             for k in xrange(self.data_stream_number):
+
                 data_stream_name = self.data_stream_list[k]
 
                 in_file_name = in_file_list_dict[data_stream_name][i]
 
+                print data_stream_name,in_file_name
+
                 in_feature_dim = in_dimension_dict[data_stream_name]
                 features, frame_number = io_funcs.load_binary_file_frame(in_file_name, in_feature_dim)
+
+                # print "Features -->"
+                # print features.shape
+                # print frame_number
+                # print out_frame_number
 
                 if k == 0:
                     out_frame_number = frame_number

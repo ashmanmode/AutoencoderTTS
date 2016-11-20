@@ -166,6 +166,9 @@ class IndividualDistortionComp(object):
             ref_file_name  = reference_dir + '/' + file_id + file_ext
             gen_file_name  = generation_dir + '/' + file_id + file_ext
 
+            # print ref_file_name
+            # print gen_file_name
+
             ref_data, ref_frame_number = io_funcs.load_binary_file_frame(ref_file_name, feature_dim)
             gen_data, gen_frame_number = io_funcs.load_binary_file_frame(gen_file_name, feature_dim)
 

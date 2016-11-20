@@ -155,7 +155,7 @@ class   ParameterGeneration(object):
                     var = self.var[feature_name]
                     
 #                print  var.shape[1]
-                if do_MLPG == False:
+                if do_MLPG == False or feature_name == 'samp' or feature_name == 'fft':
                     gen_features = current_features
                 else:
                     gen_features = mlpg_algo.generation(current_features, var, out_dimension_dict[feature_name]/3)
