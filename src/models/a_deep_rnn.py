@@ -19,7 +19,7 @@ from sae.ae_dropout import dA, dA_linear
 
 import logging
 
-class DeepRecurrentNetwork(object): 
+class DeepSAENetwork(object): 
     """
     This class is to assemble various neural network architectures. From basic feedforward neural network to bidirectional gated recurrent neural networks and hybrid architecture. **Hybrid** means a combination of feedforward and recurrent architecture.
     
@@ -41,7 +41,7 @@ class DeepRecurrentNetwork(object):
         :param output_type: the activation type of the output layer, by default is 'LINEAR', linear regression.
         :param dropout_rate: probability of dropout, a float number between 0 and 1.
         """
-        print 'DDNNNNNNNNNNNNNNN'
+        print 'DDNNNNNNNNNNNNNNN SAE'
         logger = logging.getLogger("DNN initialization")
         
         self.n_in = int(n_in)

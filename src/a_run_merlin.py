@@ -38,7 +38,8 @@ from frontend.merge_features import MergeFeat
 import configuration
 
 #Ashish Edited
-from models.a_deep_rnn import DeepRecurrentNetwork
+from models.deep_rnn import DeepRecurrentNetwork
+from models.a_deep_rnn import DeepSAENetwork
 
 from utils.compute_distortion import DistortionComputation, IndividualDistortionComp
 from utils.generate import generate_wav
@@ -243,43 +244,47 @@ def train_DNN(train_xy_file_list, valid_xy_file_list, \
     valid_fn = None
     valid_model = None ## valid_fn and valid_model are the same. reserve to computer multi-stream distortion
     if model_type == 'DNN':
-        dnn_model = DeepRecurrentNetwork(n_in= n_ins, hidden_layer_size = hidden_layer_size, n_out = n_outs, 
-                                         L1_reg = l1_reg, L2_reg = l2_reg, hidden_layer_type = hidden_layer_type, dropout_rate = dropout_rate)
-        #Ashish 
-        # pretrain_fn = dnn_model.pretraining_functions(pretrain_set_x,batch_size)
-        # print 'Built Stacked Autoencoder PreTrain function'
+        if do_pretraining == False:
+            dnn_model = DeepRecurrentNetwork(n_in= n_ins, hidden_layer_size = hidden_layer_size, n_out = n_outs, 
+                                             L1_reg = l1_reg, L2_reg = l2_reg, hidden_layer_type = hidden_layer_type, dropout_rate = dropout_rate)
+        else:
+            dnn_model = DeepSAENetwork(n_in= n_ins, hidden_layer_size = hidden_layer_size, n_out = n_outs, 
+                                             L1_reg = l1_reg, L2_reg = l2_reg, hidden_layer_type = hidden_layer_type, dropout_rate = dropout_rate)
+            ##Ashish 
+            pretrain_fn = dnn_model.pretraining_functions(pretrain_set_x,batch_size)
+            print 'Built Stacked Autoencoder PreTrain function'
 
         train_fn, valid_fn = dnn_model.build_finetune_functions(
-                    (train_set_x, train_set_y), (valid_set_x, valid_set_y))  #, batch_size=batch_size
-        
+                    (train_set_x, train_set_y), (valid_set_x, valid_set_y))  #, batch_size=batch_size 
     else: 
         logger.critical('%s type NN model is not supported!' %(model_type))
         raise
 
-    ###Ashish here for Autoencoder
-    # logger.info('pre-training the %s model --Ashish--' %(model_type))
-    # print 'PreTraining in %i batches' % (n_pretrain_batches)
-    # start_time = time.clock()
-    # corruption_levels = [.1, .2, .3, .3, .4]
-    # for i in xrange(dnn_model.n_layers):
-    #     # go through pretraining epochs
-    #     print 'Pretrain layer ',i
-    #     for epoch in xrange(pretraining_epochs):
-    #         # go through the training set
-    #         c = []
-    #         print '..... Epoch ',epoch
-    #         for batch_index in xrange(n_pretrain_batches):
-    #             c.append(pretrain_fn[i](index=batch_index,
-    #                      corruption=corruption_levels[i],
-    #                      lr=pretraining_lr))
-    #             print '..........batch ',batch_index
-    #         print 'Pre-training layer %i, epoch %d, cost ' % (i, epoch),
-    #         print numpy.mean(c)
+    if do_pretraining == True:
+        ##Ashish here for Autoencoder
+        logger.info('pre-training the %s model --Ashish--' %(model_type))
+        print 'PreTraining in %i batches' % (n_pretrain_batches)
+        start_time = time.clock()
+        corruption_levels = [.1, .2, .3, .3, .4]
+        for i in xrange(dnn_model.n_layers):
+            # go through pretraining epochs
+            print 'Pretrain layer ',i
+            for epoch in xrange(pretraining_epochs):
+                # go through the training set
+                c = []
+                print '..... Epoch ',epoch
+                for batch_index in xrange(n_pretrain_batches):
+                    c.append(pretrain_fn[i](index=batch_index,
+                             corruption=corruption_levels[i],
+                             lr=pretraining_lr))
+                    print '..........batch ',batch_index
+                print 'Pre-training layer %i, epoch %d, cost ' % (i, epoch),
+                print numpy.mean(c)
 
-    # end_time = time.clock()
+        end_time = time.clock()
 
-    # logger.debug('The pretraining code ran for %.2fm --Ashish--' % ((end_time - start_time) / 60.))
-    ###Ashish Close
+        logger.debug('The pretraining code ran for %.2fm --Ashish--' % ((end_time - start_time) / 60.))
+        ##Ashish Close
 
     logger.info('fine-tuning the %s model' %(model_type))
 
