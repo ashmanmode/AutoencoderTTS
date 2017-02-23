@@ -1,2 +1,6 @@
 *.pyc
+egs/slt_arctic/experiments\
+egs/slt_arctic/slt_arctic_demo_data\
+egs/slt_arctic/slt_arctic_demo_data.zip
+
 

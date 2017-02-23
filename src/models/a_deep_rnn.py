@@ -11,6 +11,12 @@ from theano.tensor.shared_randomstreams import RandomStreams
 from layers.gating import SimplifiedLstm, BidirectionSLstm, VanillaLstm, BidirectionLstm, VanillaRNN, SimplifiedGRU, GatedRecurrentUnit, LstmNoPeepholes, LstmNOG, LstmNIG, LstmNFG
 from layers.layers import LinearLayer, SigmoidLayer
 
+#Ashish
+from sae.logistic_sgd import LogisticRegression
+from sae.dnn_dropout import HiddenLayer
+from sae.ae_dropout import dA, dA_linear
+##Ashish
+
 import logging
 
 class DeepRecurrentNetwork(object): 
@@ -58,8 +64,13 @@ class DeepRecurrentNetwork(object):
         self.rnn_layers = []
         self.params = []
         self.delta_params = []
+
+        #Ashish
+        self.dA_layers = []
         
         rng = np.random.RandomState(123)
+
+        theano_rng = RandomStreams(rng.randint(2 ** 30))
         
         for i in xrange(self.n_layers):
             if i == 0:
@@ -107,6 +118,29 @@ class DeepRecurrentNetwork(object):
             self.rnn_layers.append(hidden_layer)
             self.params.extend(hidden_layer.params)
 
+            ##Ashish is editing
+            # Construct a denoising autoencoder that shared weights with this
+            # layer
+            ## layers for denoising autoencoder 
+            print 'Creating AutoEncoder Layer ', i
+            if i ==0:
+                dA_layer = dA_linear(numpy_rng=rng,
+                          theano_rng=theano_rng,
+                          input=layer_input,
+                          n_visible=input_size,
+                          n_hidden=hidden_layer_size[i],
+                          W=hidden_layer.W,
+                          bhid=hidden_layer.b)
+            else:
+                dA_layer = dA(numpy_rng=rng,
+                              theano_rng=theano_rng,
+                              input=layer_input,
+                              n_visible=input_size,
+                              n_hidden=hidden_layer_size[i],
+                              W=hidden_layer.W,
+                              bhid=hidden_layer.b)
+            self.dA_layers.append(dA_layer)
+
         input_size = hidden_layer_size[-1]
         if hidden_layer_type[-1]  == 'BSLSTM' or hidden_layer_type[-1]  == 'BLSTM':
             input_size = hidden_layer_size[-1]*2
@@ -130,6 +164,57 @@ class DeepRecurrentNetwork(object):
         self.errors = T.mean(T.sum((self.final_layer.output - self.y) ** 2, axis=1))
 
 #        self.L2_sqr = (self.W_hy ** 2).sum() 
+
+    def pretraining_functions(self, train_set_x, batch_size):
+        ''' Generates a list of functions, each of them implementing one
+        step in trainnig the dA corresponding to the layer with same index.
+        The function will require as input the minibatch index, and to train
+        a dA you just need to iterate, calling the corresponding function on
+        all minibatch indexes.
+
+        :type train_set_x: theano.tensor.TensorType
+        :param train_set_x: Shared variable that contains all datapoints used
+                            for training the dA
+
+        :type batch_size: int
+        :param batch_size: size of a [mini]batch
+
+        :type learning_rate: float
+        :param learning_rate: learning rate used during training for any of
+                              the dA layers
+        '''
+
+        # index to a [mini]batch
+        index = T.lscalar('index')  # index to a minibatch
+        corruption_level = T.scalar('corruption')  # % of corruption to use
+        learning_rate = T.scalar('lr')  # learning rate to use
+        # begining of a batch, given `index`
+        batch_begin = index * batch_size
+        # ending of a batch given `index`
+        batch_end = batch_begin + batch_size
+
+        pretrain_fns = []
+        for dA in self.dA_layers:
+            # get the cost and the updates list
+            cost, updates = dA.get_cost_updates(corruption_level,
+                                                learning_rate)
+            # compile the theano function
+            fn = theano.function(
+                inputs=[
+                    index,
+                    theano.In(corruption_level, value=0.2),
+                    theano.In(learning_rate, value=0.1)
+                ],
+                outputs=cost,
+                updates=updates,
+                givens={
+                    self.x: train_set_x[batch_begin: batch_end]
+                }
+            )
+            # append `fn` to the list of functions
+            pretrain_fns.append(fn)
+
+        return pretrain_fns
 
     def build_finetune_functions(self, train_shared_xy, valid_shared_xy):
         """ This function is to build finetune functions and to update gradients

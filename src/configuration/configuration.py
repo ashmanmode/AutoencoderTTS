@@ -256,6 +256,9 @@ class configuration(object):
             ('training_epochs'      , 25                            , 'Architecture', 'training_epochs'),
             ('hidden_activation'    , 'tanh'                        , 'Architecture', 'hidden_activation'),
             ('output_activation'    , 'linear'                      , 'Architecture', 'output_activation'),
+            ('do_pretraining'       , False                         , 'Architecture', 'do_pretraining'),
+            ('pretraining_epochs'    , 10                      , 'Architecture', 'pretraining_epochs'),
+            ('pretraining_lr'    , 0.0001                      , 'Architecture', 'pretraining_lr'),
             ('hidden_layer_size'  , [1024, 1024, 1024, 1024, 1024, 1024], 'Architecture', 'hidden_layer_size'),
             ('private_hidden_sizes' , [1024]                         , 'Architecture', 'private_hidden_sizes'),
             ('stream_weights'       , [1.0]                         , 'Architecture', 'stream_weights'),
@@ -418,6 +421,7 @@ class configuration(object):
         # this uses exec(...) which is potentially dangerous since arbitrary code could be executed
         for (variable,default,section,option) in user_options:
             value=None
+
 
             try:
                 # first, look for a user-set value for this variable in the config file
@@ -763,7 +767,10 @@ class configuration(object):
         self.hyper_params['training_epochs']       = self.training_epochs
         self.hyper_params['hidden_activation']     = self.hidden_activation
         self.hyper_params['output_activation']     = self.output_activation
-        self.hyper_params['hidden_layer_size']   = self.hidden_layer_size
+        self.hyper_params['do_pretraining']        = self.do_pretraining
+        self.hyper_params['pretraining_epochs']    = self.pretraining_epochs
+        self.hyper_params['pretraining_lr']        = self.pretraining_lr
+        self.hyper_params['hidden_layer_size']     = self.hidden_layer_size
         self.hyper_params['warmup_epoch']          = self.warmup_epoch
         self.hyper_params['use_rprop']             = self.use_rprop
 

@@ -8,10 +8,12 @@ world="${merlin_dir}/tools/bin/WORLD"
 sptk="${merlin_dir}/tools/bin/SPTK-3.9"
 
 # input audio directory
-wav_dir="${merlin_dir}/egs/slt_arctic/s1/slt_arctic_full_data/wav"
+# wav_dir="${merlin_dir}/egs/slt_arctic/s1/slt_arctic_full_data/wav"
+wav_dir="/home/ashish/Downloads/mcd-0.3/test_data/synth-wav"
 
 # Output features directory
-out_dir="${merlin_dir}/egs/slt_arctic/s1/slt_arctic_full_data/feat"
+# out_dir="${merlin_dir}/egs/slt_arctic/s1/slt_arctic_full_data/feat"
+out_dir="/home/ashish/Downloads/mcd-0.3/test_data/synth-examples"
 
 sp_dir="${out_dir}/sp"
 mgc_dir="${out_dir}/mgc"
