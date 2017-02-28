@@ -265,7 +265,7 @@ def train_DNN(train_xy_file_list, valid_xy_file_list, \
         logger.info('pre-training the %s model --Ashish--' %(model_type))
         print 'PreTraining in %i batches' % (n_pretrain_batches)
         start_time = time.clock()
-        corruption_levels = [.1, .2, .3, .3, .4]
+        corruption_levels = [.1, .1, .2, .2, .3, .3, .4, .4]
         for i in xrange(dnn_model.n_layers):
             # go through pretraining epochs
             print 'Pretrain layer ',i
@@ -373,7 +373,7 @@ def train_DNN(train_xy_file_list, valid_xy_file_list, \
 
             best_dnn_model = dnn_model
             best_validation_loss = this_validation_loss
-#            logger.debug('validation loss decreased, so saving model')
+#               logger.debug('validation loss decreased, so saving model')
             
         if this_validation_loss >= previous_loss:
             logger.debug('validation loss increased')
