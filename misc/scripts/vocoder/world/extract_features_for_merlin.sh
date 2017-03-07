@@ -9,11 +9,13 @@ sptk="${merlin_dir}/tools/bin/SPTK-3.9"
 
 # input audio directory
 # wav_dir="${merlin_dir}/egs/slt_arctic/s1/slt_arctic_full_data/wav"
-wav_dir="/home/ashish/Downloads/mcd-0.3/test_data/synth-wav"
+wav_dir="/home/ashish/Text2Speech/CMU_DATA/cmu_us_rms_arctic/wav"
 
 # Output features directory
 # out_dir="${merlin_dir}/egs/slt_arctic/s1/slt_arctic_full_data/feat"
-out_dir="/home/ashish/Downloads/mcd-0.3/test_data/synth-examples"
+out_dir="/home/ashish/Text2Speech/CMU_DATA/cmu_us_rms_arctic/merlin_baseline_practice/acoustic_data"
+
+echo "file loaded"
 
 sp_dir="${out_dir}/sp"
 mgc_dir="${out_dir}/mgc"
@@ -28,6 +30,8 @@ mkdir -p ${mgc_dir}
 mkdir -p ${bap_dir}
 mkdir -p ${f0_dir}
 mkdir -p ${lf0_dir}
+
+echo "directory"
 
 # initializations
 fs=16000
@@ -46,6 +50,8 @@ fi
 
 #bap order depends on sampling freq.
 mcsize=59
+
+echo "Start"
 
 for file in $wav_dir/*.wav #.wav
 do

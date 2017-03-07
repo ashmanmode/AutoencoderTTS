@@ -27,6 +27,15 @@ then
 elif [ "$voice_name" == "slt_arctic_full" ]
 then
     data_dir=slt_arctic_full_data
+elif [ "$voice_name" == "rms_arctic_full" ]
+then
+    data_dir=rms_arctic_full_data
+elif [ "$voice_name" == "bdl_arctic_full" ]
+then
+    data_dir=bdl_arctic_full_data
+elif [ "$voice_name" == "clb_arctic_full" ]
+then
+    data_dir=clb_arctic_full_data
 else
     echo "The data for voice name ($voice_name) is not available...please use slt_arctic_demo or slt_arctic_full !!"
     exit 1

@@ -6,19 +6,19 @@ if test "$#" -ne 0; then
     exit 1
 fi
 
-### Step 1: setup directories and the training data files ###
-echo "Step 1: setting up experiments directory and the training data files..."
-global_config_file=conf/global_settings.cfg
-./scripts/setup.sh slt_arctic_full
-./scripts/prepare_config_files.sh $global_config_file
-./scripts/prepare_config_files_for_synthesis.sh $global_config_file
-
 if [ ! -f  $global_config_file ]; then
     echo "Global config file doesn't exist"
     exit 1
 else
     source $global_config_file
 fi
+
+### Step 1: setup directories and the training data files ###
+echo "Step 1: setting up experiments directory and the training data files..."
+global_config_file=conf/global_settings.cfg
+./scripts/setup.sh slt_arctic_full
+./scripts/prepare_config_files.sh $global_config_file
+./scripts/prepare_config_files_for_synthesis.sh $global_config_file
 
 ### Step 2: train duration model ###
 echo "Step 2: training duration model..."
