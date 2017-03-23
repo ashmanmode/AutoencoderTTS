@@ -14,7 +14,6 @@ else
     source $global_config_file
 fi
 
-
 ### Step 1: setup directories and the training data files ###
 echo "Step 1: setting up experiments directory and the training data files..."
 ./scripts/setup.sh bdl_arctic_full

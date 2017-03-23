@@ -14,7 +14,7 @@ fi
 
 ### tools required
 FESTDIR=${MerlinDir}/tools/festival
-# FESTDIR=usr/bin/festival
+FESTBIN=/usr
 if [ ! -d "${FESTDIR}" ]; then
     echo "Please configure festival path in scripts/prepare_labels_from_txt.sh !!"
     exit 1
@@ -22,10 +22,11 @@ fi
 
 ### define few variables here
 frontend=${MerlinDir}/misc/scripts/frontend
-testDir=experiments/${Voice}/test_synthesis
+testDir=../experiments #/${Voice}/test_synthesis
 
 txt_dir=${testDir}/txt
-txt_file=${testDir}/utts.data
+txt_file=${testDir}/cmuarctic.data
+# txt_file=
 
 ### create a scheme file with options from: txt directory or utts.data file
 
@@ -51,9 +52,10 @@ python ${frontend}/utils/genScmFile.py \
                             ${testDir}/new_test_sentences.scm \
                             ${testDir}/test_id_list.scp 
 
+
 ### generate utt from scheme file
 echo "generating utts from scheme file"
-${FESTDIR}/bin/festival -b ${testDir}/new_test_sentences.scm 
+${FESTBIN}/bin/festival -b ${testDir}/new_test_sentences.scm 
 
 ### convert festival utt to lab
 echo "converting festival utts to labels..."
