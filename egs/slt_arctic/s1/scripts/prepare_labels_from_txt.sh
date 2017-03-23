@@ -14,6 +14,7 @@ fi
 
 ### tools required
 FESTDIR=${MerlinDir}/tools/festival
+# FESTDIR=usr/bin/festival
 if [ ! -d "${FESTDIR}" ]; then
     echo "Please configure festival path in scripts/prepare_labels_from_txt.sh !!"
     exit 1
