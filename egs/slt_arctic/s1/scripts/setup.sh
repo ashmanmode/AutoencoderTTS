@@ -41,6 +41,7 @@ else
     exit 1
 fi
 
+
 if [[ ! -f ${data_dir}.zip ]]; then
     echo "downloading data....."
     rm -f ${data_dir}.zip
@@ -85,6 +86,24 @@ then
     echo "Valid=5" >> $global_config_file 
     echo "Test=5" >> $global_config_file 
 elif [ "$voice_name" == "slt_arctic_full" ]
+then
+    echo "FileIDList=file_id_list_full.scp" >> $global_config_file
+    echo "Train=1000" >> $global_config_file 
+    echo "Valid=66" >> $global_config_file 
+    echo "Test=66" >> $global_config_file 
+elif [ "$voice_name" == "bdl_arctic_full" ]
+then
+    echo "FileIDList=file_id_list_full.scp" >> $global_config_file
+    echo "Train=1000" >> $global_config_file 
+    echo "Valid=66" >> $global_config_file 
+    echo "Test=66" >> $global_config_file 
+elif [ "$voice_name" == "clb_arctic_full" ]
+then
+    echo "FileIDList=file_id_list_full.scp" >> $global_config_file
+    echo "Train=1000" >> $global_config_file 
+    echo "Valid=66" >> $global_config_file 
+    echo "Test=66" >> $global_config_file 
+elif [ "$voice_name" == "rms_arctic_full" ]
 then
     echo "FileIDList=file_id_list_full.scp" >> $global_config_file
     echo "Train=1000" >> $global_config_file 
