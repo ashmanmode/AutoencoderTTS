@@ -47,7 +47,7 @@ python ${frontend}/utils/genScmFile.py \
 
 ### generate utt from scheme file
 echo "generating utts from scheme file"
-${FESTDIR}/bin/festival -b ${WorkDir}/cmuarctic.scm 
+${FESTBIN}/bin/festival -b ${WorkDir}/cmuarctic.scm 
 
 ### convert festival utt to lab
 echo "converting festival utts to labels..."

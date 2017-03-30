@@ -1,0 +1,15 @@
+######################################
+############# PATHS ##################
+######################################
+
+MerlinDir=/home/ashish/Text2Speech/TTSDNNRepo
+frontend=/home/ashish/Text2Speech/TTSDNNRepo/misc/scripts/frontend
+WorkDir=/home/ashish/Text2Speech/TTSDNNRepo/misc/scripts/alignment/state_align
+
+######################################
+############# TOOLS ##################
+######################################
+
+FESTDIR=/home/ashish/Text2Speech/TTSDNNRepo/tools/festival
+HTKDIR=/home/ashish/Text2Speech/TTSDNNRepo/tools/htk
+
