@@ -56,7 +56,7 @@ echo "######################################" >> $config_file
 echo "" >> $config_file
 
 echo "FESTDIR=${merlin_dir}/tools/festival" >> $config_file
-echo "HTKDIR=${merlin_dir}/tools/htk" >> $config_file
+echo "HTKDIR=${merlin_dir}/tools/htk/HTKTools" >> $config_file
 echo "" >> $config_file
 
 echo "Path to Merlin and other tools configured in $config_file"
