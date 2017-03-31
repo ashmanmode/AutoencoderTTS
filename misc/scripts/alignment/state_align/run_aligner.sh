@@ -40,6 +40,7 @@ echo "Step 2: forced-alignment using HTK tools..."
 
 sed -i s#'HTKDIR =.*'#'HTKDIR = "'$HTKDIR'"'# forced_alignment.py
 sed -i s#'work_dir =.*'#'work_dir = "'$WorkDir'"'# forced_alignment.py
+sed -i s#'audio_data =.*'#'audio_data = "'$audio_data'"'# forced_alignment.py
 
 python forced_alignment.py
 

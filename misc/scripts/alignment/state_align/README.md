@@ -1,6 +1,8 @@
 Create training labels for merlin with HTK tools
 ------------------------------------------------
 
+Step -1: Change the name of audio data in the setup.dh file
+
 Step 0: Install [festival] (http://festvox.org/packed/festival/2.4/festival-2.4-release.tar.gz), 
 and [HTK] (http://htk.eng.cam.ac.uk/download.shtml).
 

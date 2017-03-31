@@ -10,6 +10,7 @@ merlin_dir=$(dirname $(dirname $(dirname $(dirname $current_working_dir))))
 
 ### Download data -- slt cmuarctic.data
 
+##Change the audio data here
 audio_data=slt_wav
 
 audio_data_url=http://104.131.174.95/${audio_data}.zip
@@ -40,7 +41,7 @@ fi
 ### default settings ###
 config_file=config.cfg
 
-echo "######################################" > $config_file
+echo "########  ##############################" > $config_file
 echo "############# PATHS ##################" >> $config_file
 echo "######################################" >> $config_file
 echo "" >> $config_file
@@ -48,6 +49,7 @@ echo "" >> $config_file
 echo "MerlinDir=${merlin_dir}" >>  $config_file
 echo "frontend=${merlin_dir}/misc/scripts/frontend" >> $config_file
 echo "WorkDir=${current_working_dir}" >>  $config_file
+echo "audio_data=${audio_data}" >>  $config_file
 echo "" >> $config_file
 
 echo "######################################" >> $config_file
@@ -57,7 +59,7 @@ echo "" >> $config_file
 
 echo "FESTDIR=${merlin_dir}/tools/festival" >> $config_file
 echo "FESTBIN=/usr" >> $config_file
-echo "HTKDIR=${merlin_dir}/tools/htk" >> $config_file
+echo "HTKDIR=${merlin_dir}/tools/htk/HTKTools" >> $config_file
 echo "" >> $config_file
 
 echo "Path to Merlin and other tools configured in $config_file"
