@@ -11,7 +11,7 @@ merlin_dir=$(dirname $(dirname $(dirname $(dirname $current_working_dir))))
 ### Download data -- slt cmuarctic.data
 
 ##Change the audio data here
-audio_data=slt_wav
+audio_data=rms_wav
 
 audio_data_url=http://104.131.174.95/${audio_data}.zip
 text_data_url=http://festvox.org/cmu_arctic/cmuarctic.data

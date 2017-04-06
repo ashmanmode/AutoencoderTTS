@@ -1,0 +1,7 @@
+1. Autoencoder -> change parameters on slt (Done)
+2. Training with different size of dataset. on slt -> On Now
+3. Objecive Testing PESQ -> On Now
+4. Subjective Testing. (MOS Qlality)
+5. HMM results
+
+--> Only FFT Feats

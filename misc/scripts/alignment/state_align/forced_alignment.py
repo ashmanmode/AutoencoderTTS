@@ -359,7 +359,7 @@ if __name__ == '__main__':
 
     work_dir = "/home/ashish/Text2Speech/TTSDNNRepo/misc/scripts/alignment/state_align"
 
-    audio_data = "slt_wav"
+    audio_data = "rms_wav"
     wav_dir = os.path.join(work_dir, audio_data)
     lab_dir = os.path.join(work_dir, 'label_no_align')
     lab_align_dir = os.path.join(work_dir, 'label_state_align')

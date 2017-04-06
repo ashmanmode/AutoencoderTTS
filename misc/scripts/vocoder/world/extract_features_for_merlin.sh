@@ -9,11 +9,11 @@ sptk="${merlin_dir}/tools/bin/SPTK-3.9"
 
 # input audio directory
 # wav_dir="${merlin_dir}/egs/slt_arctic/s1/slt_arctic_full_data/wav"
-wav_dir="/home/ashish/Text2Speech/CMU_DATA/bdl_arctic_full_data/wav"
+wav_dir="/home/ashish/Text2Speech/Archive/cmu_us_rms_arctic/wav"
 
 # Output features directory
 # out_dir="${merlin_dir}/egs/slt_arctic/s1/slt_arctic_full_data/feat"
-out_dir="/home/ashish/Text2Speech/CMU_DATA/bdl_arctic_full_data/merlin_baseline_practice/acoustic_data"
+out_dir="/home/ashish/Text2Speech/Archive/cmu_us_rms_arctic/merlin_baseline_practice/acoustic_data"
 
 echo "file loaded"
 
