@@ -7,3 +7,15 @@
 --> Only FFT Feats
 
 Now I will add phase features here.
+
+Problems:
+
+1. If we break the signal into frames and then get fft for each frame,
+try to concate the inverse fft of the same then we dont get the reconstructed signal in good form. 
+
+[ASK] 2. With the new architecture [10*1024] and epo50_lr0.00005 we are getting good results, should I get the results for all other databases with this configuration.
+
+3. So we have results over databases and different configurations over slt. 
+
+[ASK] 4. For comparison we will need MOS scores for baseline as well as new architecture. 
+
